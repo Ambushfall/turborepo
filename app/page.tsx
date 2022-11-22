@@ -42,10 +42,11 @@ export default async function Home() {
 }
 
 function HeadingTitle(props: JSONApiAmbush) {
+  const {Name, Auth} = props
   console.log(props)
   return (
     <h1 className={styles.title}>
-      {props?.Name} is {props.Auth}
+      {Name} is {Auth}
     </h1>
   )
 }
