@@ -1,6 +1,8 @@
 import styles from './page.module.css'
 import Link from 'next/link';
-import { Footer } from './Footer';
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
+import Image from 'next/image';
 
 type linkObj = {
   href: string,
@@ -26,17 +28,15 @@ const linkObjs:Array<linkObj> = [docsLink, JSONAPI,cssLink]
 
 
 export default async function Home() {
-  const api = await (await fetch('https://ambushfall.github.io/TestSon/Data/api.json')).json();
-
+  const api:JSONApiAmbush = { '$schema': [], Auth: false, Name: 'Ambushfall' }
 
   return (
     <div className={styles.container}>
       <main className={styles.main}>
         <HeadingTitle {...api} />
-        <HeadingDescription />
         <GridItemLinks {...linkObjs} />
+        <Loading />
       </main>
-      {/* <Footer /> */}
     </div>
   )
 }
@@ -46,20 +46,15 @@ function HeadingTitle(props: JSONApiAmbush) {
   console.log(props)
   return (
     <h1 className={styles.title}>
-      {Name} is {Auth}
+      {Name} {Auth}
     </h1>
   )
 }
 
-
-function HeadingDescription() {
-  return (
-    <p className={styles.description}>
-      Get started by editing{' '}
-      <code className={styles.code}>app/page.tsx</code>
-    </p>
-  )
+const Loading = () => {
+  return (<Image src="/loading.svg" alt="Vercel Logo" width={150} height={150} />)
 }
+
 
 function GridItemLinks(links: Array<linkObj>) {
   return (
