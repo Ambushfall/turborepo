@@ -1,4 +1,5 @@
 import styles from '../app/page.module.css'
+import '../app/globals.css'
 
 export default function bonjour(){
     return (<>

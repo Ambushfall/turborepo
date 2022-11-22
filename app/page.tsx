@@ -18,7 +18,7 @@ type JSONApiAmbush = {
 }
 
 const docsLink: linkObj = { href: "/leaveserver", h2Text: "Leave Cherry's", pText: "Find a simple way to stop getting scammed." }
-const cssLink: linkObj = { href: "/api/CSSEDIT", h2Text: "CSS Live Editor", pText: "Try out editing CSS Live in browser" }
+const cssLink: linkObj = { href: "/CSSEDIT", h2Text: "CSS Live Editor", pText: "Try out editing CSS Live in browser" }
 const JSONAPI : linkObj = { href: "/api/hello", h2Text: "JSON Api Route", pText: "Directly Route to the Test JSON Api"}
 
 const linkObjs:Array<linkObj> = [docsLink, JSONAPI,cssLink]
