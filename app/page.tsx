@@ -17,9 +17,9 @@ type JSONApiAmbush = {
   '$schema'?:[]
 }
 
-const docsLink: linkObj = { href: "https://beta.nextjs.org/docs", h2Text: "Documentation", pText: "Find in-depth information about Next.js 13" }
-const cssLink: linkObj = { href: "/bootload/CSSEDIT", h2Text: "CSS Live Editor", pText: "Try out editing CSS Live in browser" }
-const JSONAPI : linkObj = { href: "/api/hello", h2Text: "JSON Api Route", pText: "Directly Route to the JSON Api"}
+const docsLink: linkObj = { href: "/leaveserver", h2Text: "Leave Cherry's", pText: "Find a simple way to stop getting scammed." }
+const cssLink: linkObj = { href: "/api/CSSEDIT", h2Text: "CSS Live Editor", pText: "Try out editing CSS Live in browser" }
+const JSONAPI : linkObj = { href: "/api/hello", h2Text: "JSON Api Route", pText: "Directly Route to the Test JSON Api"}
 
 const linkObjs:Array<linkObj> = [docsLink, JSONAPI,cssLink]
 
@@ -36,7 +36,7 @@ export default async function Home() {
         <HeadingDescription />
         <GridItemLinks {...linkObjs} />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
