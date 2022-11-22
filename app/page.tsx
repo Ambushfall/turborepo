@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link';
+import { link } from 'fs';
 
 type linkObj = {
   href: string,
@@ -17,11 +18,11 @@ type JSONApiAmbush = {
   '$schema'?:[]
 }
 
-const docsLink = { href: "https://beta.nextjs.org/docs", h2Text: "Documentation", pText: "Find in-depth information about Next.js 13" }
-const infoLink = { href: "https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app", h2Text: "Powered by{' '}", pText: "infoLink" }
+const docsLink: linkObj = { href: "https://beta.nextjs.org/docs", h2Text: "Documentation", pText: "Find in-depth information about Next.js 13" }
+const cssLink: linkObj = { href: "/bootload/CSSEDIT", h2Text: "CSS Live Editor", pText: "Try out editing CSS Live in browser" }
+const JSONAPI : linkObj = { href: "/api/hello", h2Text: "JSON Api Route", pText: "Directly Route to the JSON Api"}
 
-
-const linkObjs:Array<linkObj> = [docsLink, infoLink,docsLink,docsLink]
+const linkObjs:Array<linkObj> = [docsLink, JSONAPI,cssLink]
 
 
 
