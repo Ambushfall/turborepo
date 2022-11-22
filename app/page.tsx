@@ -2,10 +2,31 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link';
 
+type linkObj = {
+  href: string,
+  target?: string | undefined,
+  rel?: string | undefined,
+  className?: string | undefined,
+  h2Text: string | undefined,
+  pText: string | undefined,
+}
+
+type JSONApiAmbush = {
+  Name? : string | undefined,
+  Auth : boolean | undefined,
+  '$schema'?:[]
+}
+
+const docsLink = { href: "https://beta.nextjs.org/docs", h2Text: "Documentation", pText: "Find in-depth information about Next.js 13" }
+const infoLink = { href: "https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app", h2Text: "Powered by{' '}", pText: "infoLink" }
+
+
+const linkObjs:Array<linkObj> = [docsLink, infoLink,docsLink,docsLink]
+
+
 
 export default async function Home() {
   const api = await (await fetch('https://ambushfall.github.io/TestSon/Data/api.json')).json();
-  console.log(api);
 
 
   return (
@@ -13,15 +34,14 @@ export default async function Home() {
       <main className={styles.main}>
         <HeadingTitle {...api} />
         <HeadingDescription />
-        <GridItemLinks />
-
+        <GridItemLinks {...linkObjs} />
       </main>
       <Footer />
     </div>
   )
 }
 
-function HeadingTitle(props: any) {
+function HeadingTitle(props: JSONApiAmbush) {
   console.log(props)
   return (
     <h1 className={styles.title}>
@@ -55,28 +75,14 @@ function Footer() {
   </footer>)
 }
 
-function GridItemLinks() {
+function GridItemLinks(links: Array<linkObj>) {
   return (
     <div className={styles.grid}>
-      <Link href="https://beta.nextjs.org/docs" className={styles.card}>
-        <h2>Documentation &rarr;</h2>
-        <p>Find in-depth information about Next.js 13</p>
+      {Object.values(links).map((value, i) => <Link key={i} href={value.href} className={styles.card}>
+        <h2>{value.h2Text} &rarr;</h2>
+        <p>{value.pText}</p>
       </Link>
-
-      <Link
-        href="https://github.com/vercel/next.js/tree/canary/examples" className={styles.card}>
-        <h2>Examples &rarr;</h2>
-        <p>Explore the Next.js 13 playground.</p>
-      </Link>
-
-      <Link
-        href="https://vercel.com/templates/next.js/app-directory?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={styles.card}>
-        <h2>Deploy &rarr;</h2>
-        <p>Deploy your Next.js site to a public URL with Vercel.</p>
-      </Link>
+      )}
     </div>
   )
 }
