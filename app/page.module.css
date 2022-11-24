@@ -147,6 +147,9 @@
   .logo img {
     filter: invert(1);
   }
+  .svgdark{
+    display:none;
+  }
 }
 
 
@@ -156,5 +159,8 @@
   .card:hover{
     color: var(--card-color-old);
     border-color: var(--card-color-old);
+  }
+  .svglight{
+    display:none;
   }
 }

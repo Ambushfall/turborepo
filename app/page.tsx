@@ -26,7 +26,7 @@ type JSONApiAmbush = {
  * Constants and destructures
 */
 
-const { container, main, title, grid, card } = styles
+const { container, main, title, grid, card, svgdark, svglight } = styles
 
 const api: JSONApiAmbush = { '$schema': [], Auth: false, Name: 'Ambushfall' };
 const docsLink: linkObj = { href: "/leaveserver", h2Text: "Leave Cherry's", pText: "Find a simple way to stop getting scammed." };
@@ -67,7 +67,11 @@ function HeadingTitle(props: JSONApiAmbush) {
 }
 
 const Loading = () => {
-  return (<Image src="/loading.svg" alt="Vercel Logo" width={150} height={150} />)
+  return (<>
+    <Image className={svglight} src="/loading.svg" alt="Vercel Logo" width={150} height={150} />
+    <Image className={svgdark} src="/loading-black.svg" alt="Vercel Logo" width={150} height={150} />
+    </>
+  )
 }
 
 
