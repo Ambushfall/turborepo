@@ -1,7 +1,6 @@
 import styles from './page.module.css'
 import Link from 'next/link';
-import Image from 'next/image';
-
+import Loading from './loading'
 
 /**
  * TypeDefs
@@ -26,13 +25,12 @@ type JSONApiAmbush = {
  * Constants and destructures
 */
 
-const { container, main, title, grid, card, svgdark, svglight } = styles
+const { container, main, title, grid, card } = styles
 
 const api: JSONApiAmbush = { '$schema': [], Auth: false, Name: 'Ambushfall' };
 const docsLink: linkObj = { href: "/leaveserver", h2Text: "Leave Cherry's", pText: "Find a simple way to stop getting scammed." };
 const cssLink: linkObj = { href: "/CSSEDIT", h2Text: "CSS Live Editor", pText: "Try out editing CSS Live in browser" };
 const JSONAPI: linkObj = { href: "/api/hello", h2Text: "JSON Api Route", pText: "Directly Route to the Test JSON Api" };
-const MareDor: linkObj = { href: "/bonjour", h2Text: "Bonjour!", pText: "Greetings Maredor!" };
 
 
 /**
@@ -43,14 +41,12 @@ const linkObjs: Array<linkObj> = [docsLink, JSONAPI, cssLink]
 
 
 export default async function Home() {
-
-
   return (
     <div className={container}>
       <main className={main}>
         <HeadingTitle {...api} />
         <GridItemLinks {...linkObjs} />
-        <Loading />
+        {/* <Loading /> */}
       </main>
     </div>
   )
@@ -63,14 +59,6 @@ function HeadingTitle(props: JSONApiAmbush) {
     <h1 className={title}>
       {Name} {Auth}
     </h1>
-  )
-}
-
-const Loading = () => {
-  return (<>
-    <Image className={svglight} src="/loading.svg" alt="Vercel Logo" width={150} height={150} />
-    <Image className={svgdark} src="/loading-black.svg" alt="Vercel Logo" width={150} height={150} />
-    </>
   )
 }
 
