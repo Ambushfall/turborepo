@@ -1,6 +1,5 @@
 import styles from './page.module.css'
 import Link from 'next/link';
-import Loading from './loading'
 
 /**
  * TypeDefs
@@ -46,7 +45,6 @@ export default async function Home() {
       <main className={main}>
         <HeadingTitle {...api} />
         <GridItemLinks {...linkObjs} />
-        {/* <Loading /> */}
       </main>
     </div>
   )
