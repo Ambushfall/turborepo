@@ -1,5 +1,6 @@
 import styles from './page.module.css'
 import Link from 'next/link';
+// import Image from 'next/image'
 
 /**
  * TypeDefs
@@ -45,6 +46,7 @@ export default async function Home() {
       <main className={main}>
         <HeadingTitle {...api} />
         <GridItemLinks {...linkObjs} />
+        {/* <Image alt='TestSVG' src='/frame5.svg' width={150} height={150} /> */}
       </main>
     </div>
   )
