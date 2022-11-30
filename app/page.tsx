@@ -41,12 +41,13 @@ const linkObjs: Array<linkObj> = [docsLink, JSONAPI, cssLink]
 
 
 export default async function Home() {
+  
   return (
     <div className={container}>
       <main className={main}>
         <HeadingTitle {...api} />
         <GridItemLinks {...linkObjs} />
-        {/* <Image alt='TestSVG' src='/frame5.svg' width={150} height={150} /> */}
+
       </main>
     </div>
   )
@@ -67,8 +68,8 @@ function GridItemLinks(links: Array<linkObj>) {
   return (
     <div className={grid}>
       {Object.values(links).map((value, i) => <Link key={i} href={value.href} className={card}>
-        <h2 key={i} >{value.h2Text} &rarr;</h2>
-        <p key={i}>{value.pText}</p>
+        <h2>{value.h2Text} &rarr;</h2>
+        <p>{value.pText}</p>
       </Link>
       )}
     </div>
