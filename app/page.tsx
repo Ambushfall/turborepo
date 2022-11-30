@@ -67,8 +67,8 @@ function GridItemLinks(links: Array<linkObj>) {
   return (
     <div className={grid}>
       {Object.values(links).map((value, i) => <Link key={i} href={value.href} className={card}>
-        <h2>{value.h2Text} &rarr;</h2>
-        <p>{value.pText}</p>
+        <h2 key={i} >{value.h2Text} &rarr;</h2>
+        <p key={i}>{value.pText}</p>
       </Link>
       )}
     </div>
