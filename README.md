@@ -2,12 +2,12 @@
   <img src="javascript:void(0)" alt="Logo" width=128 height=128> </a>
 
 <h3 align="center">
-   OKM Navi
+   Experimental App
 </h3>
 <p align="center">
-   Agent Navigation Tool <br>
-   <a href="javascript:void(0)">Report
-   bug - Teams</a> // <a href="javascript:void(0)">Report Bug - Mail</a> // 
+     Experimental App
+ <br>
+   <a href="javascript:void(0)">Reprt </a> // <a href="javascript:void(0)">Report Bug - Mail</a> // 
    <a href="javascript:void(0)">Request
    feature</a>
 </p>
