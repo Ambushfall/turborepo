@@ -1,5 +1,7 @@
 import './globals.css'
 import GradientBG from './gradientBackground'
+import Navigation from './navigation'
+
 
 export default function RootLayout({
   children,
@@ -14,6 +16,7 @@ export default function RootLayout({
       */}
       <head />
       <body>
+        <Navigation/>
         <GradientBG/>
         {children}
         </body>
