@@ -47,7 +47,6 @@ export default async function Home() {
       <main className={main}>
         <HeadingTitle {...api} />
         <GridItemLinks {...linkObjs} />
-
       </main>
     </div>
   )

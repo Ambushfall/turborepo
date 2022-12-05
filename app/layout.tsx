@@ -3,11 +3,13 @@ import GradientBG from './gradientBackground'
 import Navigation from './navigation'
 
 
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="en">
       {/*
