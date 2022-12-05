@@ -3,8 +3,7 @@ import GradientBG from './gradientBackground'
 import Navigation from './navigation'
 import { promises as fs } from 'fs'
 import path from 'path'
-
-
+import { AnalyticsWrapper } from './components/analytics';
 
 
 export default async function RootLayout({
@@ -30,6 +29,7 @@ export default async function RootLayout({
         <Navigation urls={filterDirectories} />
         <GradientBG />
         {children}
+        <AnalyticsWrapper />
       </body>
     </html>
   )
