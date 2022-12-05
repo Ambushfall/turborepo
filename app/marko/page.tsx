@@ -1,6 +1,7 @@
 
 import Image from 'next/image'
 // import GradientBG from './hero'
+import styles from '../page.module.css'
 
 
 export default function Page() {
@@ -14,8 +15,8 @@ export default function Page() {
 const ComponentOne = () => {
     return (
         <>
-            <div className='py-0 p-8'>
-                <main className='min-h-fit flex flex-col justify-center items-center p-16 flex-1'>
+            <div className={styles.container}>
+                <main className={styles.main}>
                     <Image alt='Test' src={'/frame5.svg'} width={150} height={150} />
                 </main>
             </div>
