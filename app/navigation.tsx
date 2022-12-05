@@ -1,10 +1,7 @@
-import { link } from "fs";
 import Link from "next/link";
 
 
-const Navigation = ({ urls }:{urls:any}) => {
-  console.log(urls)
-
+const Navigation = ({ urls }: { urls: Array<string>; }) => {
   const linkStyle = `text-base font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out dark:text-white dark:hover:text-gray-200`
 
   return (
@@ -15,7 +12,7 @@ const Navigation = ({ urls }:{urls:any}) => {
         </div>
         <nav className="hidden md:flex space-x-8">
           <>
-            {urls.map((el:string) => <Link className={linkStyle} href={`/${el}`} key={el}>{el}</Link>)}
+            {urls.map((el: string) => <Link className={linkStyle} href={`/${el}`} key={el}>{el}</Link>)}
           </>
         </nav>
       </div>

@@ -6,20 +6,19 @@ import path from 'path'
 
 
 
-// eslint-disable-next-line
+
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
 
+  const regEx = new RegExp(/^([^.]+)$/g)
+  const postsDirectory = path.join(process.cwd(), '/app')
+  const filenames = await fs.readdir(postsDirectory)
+  const filterDirectories = filenames.filter((e) => regEx.test(e) ? e : false)
 
-    const regEx = new RegExp(/^([^.]+)$/g)
-    const postsDirectory = path.join(process.cwd(), '/app')
-    const filenames = await fs.readdir(postsDirectory)
-    const filterDirectories = filenames.filter((e) => regEx.test(e) ? e : false)
 
-  
   return (
     <html lang="en">
       {/*
@@ -28,10 +27,10 @@ export default async function RootLayout({
       */}
       <head />
       <body>
-        <Navigation urls={filterDirectories}/>
-        <GradientBG/>
+        <Navigation urls={filterDirectories} />
+        <GradientBG />
         {children}
-        </body>
+      </body>
     </html>
   )
 }
