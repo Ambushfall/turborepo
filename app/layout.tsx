@@ -12,11 +12,11 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
 
-  const regEx = new RegExp(/^([^.]+)$/g)
+  const reg = /^([^.]+)$/g;
   const postsDirectory = path.join(process.cwd(), '/app')
   const filenames = await fs.readdir(postsDirectory)
-  const filterDirectories = filenames.filter((e) => regEx.test(e) ? e : false)
-
+  const filterDirectories = filenames.filter((e) => e.match(reg) ? e !=='components' : false)
+  console.log(filterDirectories)
 
   return (
     <html lang="en">
