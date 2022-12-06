@@ -27,7 +27,7 @@ export default function ReactImageGallery() {
 
   return (
     <>
-      <PhotoAlbum layout="columns" onClick={(e)=>console.log(e)} photos={photos} renderPhoto={NextJsImage} />
+      <PhotoAlbum layout="columns" onClick={(e) => console.log(e)}  photos={photos} renderPhoto={NextJsImage} />
     </>
   )
 }
