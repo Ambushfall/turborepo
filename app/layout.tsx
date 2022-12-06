@@ -13,10 +13,12 @@ export default async function RootLayout({
 }) {
 
   const reg = /^([^.]+)$/g;
-  const postsDirectory = path.join(process.cwd(), '/app')
-  const filenames = await fs.readdir(postsDirectory)
-  const filterDirectories = filenames.filter((e) => e.match(reg) ? e !=='components' : false)
-  console.log(filterDirectories)
+  const appDirectory = path.join(process.cwd(), '/app');
+  const imageDirectory = path.join(process.cwd(), '/public/midj');
+  const appFilenames = await fs.readdir(appDirectory)
+  const imageFilenames = await fs.readdir(imageDirectory)
+  console.log(imageFilenames)
+  const filterDirectories = appFilenames.filter((e) => e.match(reg) ? e !=='components' : false)
 
   return (
     <html lang="en">
