@@ -28,6 +28,7 @@ async function update(id: number, completed: boolean, refresh: () => void) {
 
 export default function Todo(todo: Todo) {
     const router = useRouter();
+    console.log(process.env.NEXT_PUBLIC_HOST)
 
     return (
         <li>
