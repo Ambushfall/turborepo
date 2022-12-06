@@ -20,6 +20,7 @@ export default async function Page() {
             {/* {todos.map((todo) => (
                 <Todo key={todo.id} {...todo} />
             ))} */}
+            {process.env.NEXT_PUBLIC_HOST}
         </ul>
     );
 }
