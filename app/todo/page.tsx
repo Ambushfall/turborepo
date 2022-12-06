@@ -8,18 +8,18 @@ interface Todo {
 
 async function getTodos() {
     console.log(process.env.NEXT_PUBLIC_HOST)
-    const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/todos`);
-    const todos: Todo[] = await res.json();
-    return todos;
+    // const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/todos`);
+    // const todos: Todo[] = await res.json();
+    // return todos;
 }
 
 export default async function Page() {
-    const todos = await getTodos();
+    // const todos = await getTodos();
     return (
         <ul>
-            {todos.map((todo) => (
+            {/* {todos.map((todo) => (
                 <Todo key={todo.id} {...todo} />
-            ))}
+            ))} */}
         </ul>
     );
 }
