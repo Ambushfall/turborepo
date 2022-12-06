@@ -12,7 +12,7 @@ const { container, main, title, grid, card } = styles
 const GalleryPage = async () => {
     const imageDirectory = path.join(process.cwd(), '/public/midj');
     const imageFilenames = await fs.readdir(imageDirectory)
-    console.log(imageFilenames)
+    // console.log(imageFilenames)
 
     return (
         <div className={container}>
