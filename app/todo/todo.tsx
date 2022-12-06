@@ -9,7 +9,7 @@ interface Todo {
 }
 
 async function update(id: number, completed: boolean, refresh: () => void) {
-    await fetch(`http://localhost:3000/api/todos/${id}`, {
+    await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/todos/${id}`, {
         method: 'POST',
         body: JSON.stringify({
             "userId": 1,
