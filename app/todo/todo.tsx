@@ -10,11 +10,11 @@ interface Todo {
 
 async function update(id: number, completed: boolean, refresh: () => void) {
     await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/todos/${id}`, {
-        method: 'PUT',
+        method: 'POST',
         body: JSON.stringify({
             "userId": 1,
-            "id": 1,
-            "title": "delectus Anus",
+            "id": 8,
+            "title": "delectus thy Anus",
             "completed": true
         }),
         headers: {
