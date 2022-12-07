@@ -30,7 +30,7 @@ const { container, main, title, grid, card } = styles
 const api: JSONApiAmbush = { '$schema': [], Auth: false, Name: 'Ambushfall' };
 const docsLink: linkObj = { href: "/leaveserver", h2Text: "Leave Cherry's", pText: "Find a simple way to stop getting scammed." };
 const cssLink: linkObj = { href: "/editor", h2Text: "CSS Live Editor", pText: "Try out editing CSS Live in browser" };
-const JSONAPI: linkObj = { href: "/api/hello", h2Text: "JSON Api Route", pText: "Directly Route to the Test JSON Api" };
+const JSONAPI: linkObj = { href: "/api/todos", h2Text: "JSON Api Route", pText: "Directly Route to the Test JSON Api" };
 
 
 /**
@@ -40,8 +40,7 @@ const linkObjs: Array<linkObj> = [docsLink, JSONAPI, cssLink]
 
 
 
-export default async function Home() {
-  
+export default function Home() {
   return (
     <div className={container}>
       <main className={main}>
