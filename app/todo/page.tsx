@@ -7,7 +7,7 @@ interface Todo {
 }
 
 async function getTodos() {
-    console.log(process.env.NEXT_PUBLIC_HOST)
+    // console.log(process.env.NEXT_PUBLIC_HOST)
     const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/todos`);
     const todos: Todo[] = await res.json();
     return todos;

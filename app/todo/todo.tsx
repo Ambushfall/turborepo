@@ -10,11 +10,11 @@ interface Todo {
 
 async function update(id: number, completed: boolean, refresh: () => void) {
     await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/todos/${id}`, {
-        method: 'POST',
+        method: 'PUT',
         body: JSON.stringify({
             "userId": 1,
             "id": 1,
-            "title": "delectus aut autem",
+            "title": "delectus Anus",
             "completed": true
         }),
         headers: {
@@ -28,7 +28,7 @@ async function update(id: number, completed: boolean, refresh: () => void) {
 
 export default function Todo(todo: Todo) {
     const router = useRouter();
-    console.log(process.env.NEXT_PUBLIC_HOST)
+    // console.log(process.env.NEXT_PUBLIC_HOST)
 
     return (
         <li>
