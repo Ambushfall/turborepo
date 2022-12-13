@@ -1,3 +1,5 @@
+import { promises as fs } from 'fs'
+import path from 'path'
 import React from 'react';
 import styles from '../page.module.css'
 import { Gallery } from './Gallery';
@@ -8,8 +10,8 @@ const { container, main, title } = styles
 
 
 const GalleryPage = async () => {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/image/`)
-    const imageFilenames = await response.json()
+    const imageDirectory = path.join(process.cwd(), '/public/midj');
+    const imageFilenames = await fs.readdir(imageDirectory)
 
     return (
         <div className={container}>

@@ -53,7 +53,7 @@ export default function Home() {
 
 function HeadingTitle(props: JSONApiAmbush) {
   const { Name, Auth } = props
-  console.log(props)
+  // console.log(props)
   return (
     <h1 className={title}>
       {Name} {Auth}

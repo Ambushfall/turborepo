@@ -1,5 +1,4 @@
 
-
 .container {
   padding: 0 2rem;
 }
@@ -92,12 +91,21 @@
   max-width: 300px;
 }
 
+
 .card:hover,
 .card:focus,
 .card:active {
   color: var(--card-color-new);
   border-color: var(--card-color-new);
 }
+
+.card:hover a,
+.card:focus a,
+.card:active a{
+  color: var(--card-color-old);
+  border-color: var(--card-color-old);
+}
+
 
 .card h2 {
   margin: 0 0 1rem 0;
@@ -138,7 +146,7 @@
     text-fill-color: transparent;
   }
   .card,
-  .footer {
+  .footer{
     border-color: #222;
   }
   .code {
@@ -158,3 +166,4 @@
     border-color: var(--card-color-old);
   }
 }
+
