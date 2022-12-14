@@ -25,6 +25,7 @@ const getRepos = async () => {
 
 export default async function Page() {
     const repos = await getRepos()
+    console.log('fetched')
     if (typeof repos === 'number') return (
         <div className={container} >
             <main className={main}>
@@ -33,7 +34,7 @@ export default async function Page() {
         </div>
     )
     // const request = await octokit.request('GET /users/{username}', { username: GitHubUserName })
-
+       
     return (
         <>
             <div className={container} >

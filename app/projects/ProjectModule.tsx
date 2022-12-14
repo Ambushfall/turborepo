@@ -10,15 +10,19 @@ export default function ProjectModule({ repos }: { repos: any[] }) {
     // const keys = ['']
 
     useEffect(() => {
-        console.log(query)
+        // console.log()
     }, [query]);
    
     return (
         <section >
             <input type="text" placeholder="Search Projects" onChange={(e) => setQuery(e.target.value)} />
             <ul className={styles.grid} >
-                <RepositoryModule repoData={repos} />
+                <RepositoryModule repoData={searchFunction(repos, query)} />
             </ul>
         </section>
     )
 }
+function searchFunction(repos: any[], query: string): any {
+    return repos.filter((e, i) => e.name.toLowerCase().replaceAll(' ', '').replaceAll('-','').includes(query.toLowerCase().replaceAll(' ', '').replaceAll('-','')));
+}
+
