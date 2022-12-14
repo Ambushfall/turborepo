@@ -1,36 +1,12 @@
 import { Octokit } from "@octokit/core";
 import styles from '../page.module.css';
 import ProjectModule from "./ProjectModule";
-import Image from "next/image";
-
 const { container, main, title, grid, card } = styles;
 const GitHubUserName = 'Ambushfall';
 const octokit = new Octokit({ auth: process.env.PRS_ACC_TOK });
 
 
 
-
-// display infomation from github profile
-const displayProfile = ({ profile }: { profile: any }) => {
-
-    return (<>
-        <figure>
-            <Image alt="user avatar" src={profile.avatar_url} />
-        </figure>
-        <div>
-            <h2><a href={profile.blog}><strong>{profile.name}</strong></a></h2>
-            <p>{profile.bio}</p>
-            <p>
-                <strong>Location:</strong> {profile.location}
-            </p>
-            <p>
-                <strong>@{profile.login} </strong>
-                Repos: {profile.public_repos}
-                Gists: {profile.public_gists}
-            </p>
-        </div></>
-    )
-};
 
 const getRepos = async () => {
     const request = await octokit.request('GET /users/{username}/repos{?type,sort,direction,per_page,page}', {
