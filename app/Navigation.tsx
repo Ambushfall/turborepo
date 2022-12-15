@@ -15,11 +15,11 @@ const Navigation = ({ urls }: { urls: Array<string>; }) => {
     return (
         <div>
             <HomeSVG handleChange={onClickHandler} />
-            <div className={`${isOpen ? "md:block hidden" : "md:hidden block"} bg-slate-100 antialiased text-slate-300 selection:bg-blue-600 selection:text-white`}>
-                <div className='flex flex-col relative w-screen'>
-                    <div id='menu' className='min-h-screen z-10 bg-white dark:bg-black md:bg-transparent border-r-[1px] border-[#eaeaea] text-slate-300 w-64 fixed left-0 h-screen '>
+            <div className={`${isOpen ? "2xl:block hidden" : "2xl:hidden block"} bg-slate-100 antialiased text-slate-300 selection:bg-blue-600 selection:text-white`}>
+                <div className=' flex flex-col relative w-screen'>
+                    <div id='menu' className='min-h-screen z-10 bg-white dark:bg-black 2xl:bg-transparent border-r-[1px] border-[#eaeaea] text-slate-300 w-64 fixed left-0 h-screen '>
                         <div id='logo' className='my-4 px-6'>
-                            <h1 className='text-lg md:text-2xl font-bold dark:text-white text-black'>Ambushfall<span className='text-blue-500'>POC</span>.</h1>
+                            <h1 className='text-lg 2xl:text-2xl font-bold dark:text-white text-black'>Ambushfall<span className='text-blue-500'>POC</span>.</h1>
                             <p className='text-slate-500 text-sm'>Nav Menu</p>
                         </div>
                         <div id='profile' className='px-6 py-6'>
@@ -62,7 +62,7 @@ function NavLink({ href, NavItemName, NavItemDescription, pathToSvg, isActive, c
             </div>
             <div className='flex flex-col -z-20'>
                 <span className='text-lg font-bold leading-5 dark:text-white text-black'>{NavItemName}</span>
-                <span className='text-sm text-black/50 dark:text-white/50 hidden md:block'>{NavItemDescription}</span>
+                <span className='text-sm text-black/50 dark:text-white/50 hidden 2xl:block'>{NavItemDescription}</span>
             </div>
         </Link>
     )
