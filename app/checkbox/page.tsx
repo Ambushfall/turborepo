@@ -75,7 +75,7 @@ export default function TopingApp() {
         updateTotal(updatedCheckedState);
     };
 
-    console.log(checkedState.every((value) => value));
+    // console.log(checkedState.every((value) => value));
 
     return (
         <div className={main}>

@@ -3,12 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { HomeSVG } from "./components/homeSVG";
+
 const Navigation = ({ urls }: { urls: Array<string>; }) => {
-
+    // const route = document?.location?.pathname ? document.location : false
     const [isOpen, setIsOpen] = useState(false);
-
-    function onClickHandler() {
+    function onClickHandler(event:any) {
         setIsOpen(!isOpen)
+        // console.log(route)
     }
 
     return (
@@ -44,8 +45,8 @@ const Navigation = ({ urls }: { urls: Array<string>; }) => {
                     </ul> */}
                         {/* Navigation Items Example  */}
                         <div id='nav' className='w-full'>
-                            <NavLink href="/" NavItemName="Home" NavItemDescription="HomePage" pathToSvg='/vercel.svg' isActive={true}/>
-                            {urls.map((el: string) => <NavLink key={`key${el}`} href={`/${el}`} NavItemName={el} NavItemDescription={`Project Showcase: ${el}`} pathToSvg='/vercel.svg' isActive={false} />)}
+                            <NavLink href="/" clickHandler={onClickHandler} NavItemName="Home" NavItemDescription="HomePage" pathToSvg='/vercel.svg' isActive={false} />
+                            {urls.map((el: string) => <NavLink clickHandler={onClickHandler} key={`key${el}`} href={`/${el}`} NavItemName={el} NavItemDescription={`Project Showcase: ${el}`} pathToSvg='/vercel.svg' isActive={false} />)}
                         </div>
                     </div>
                 </div>
@@ -53,13 +54,13 @@ const Navigation = ({ urls }: { urls: Array<string>; }) => {
         </div>
     )
 }
-function NavLink({ href, NavItemName, NavItemDescription, pathToSvg, isActive }: { href: string, NavItemName: string, NavItemDescription: string, pathToSvg: string, isActive?: boolean }) {
+function NavLink({ href, NavItemName, NavItemDescription, pathToSvg, isActive, clickHandler }: { href: string, NavItemName: string, NavItemDescription: string, pathToSvg: string, isActive?: boolean, clickHandler?: any }) {
     return (
-        <Link href={href} className={`${isActive ? 'bg-blue-800' : ''} w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3  hover:bg-white/5 transition ease-linear duration-150`}>
-            <div>
+        <Link onClick={clickHandler} href={href} className={`${isActive ? 'bg-blue-800' : ''} w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3  hover:bg-white/5 transition ease-linear duration-150`}>
+            <div className="-z-20">
                 <Image src={pathToSvg} alt="Logo" width={72} height={16} />
             </div>
-            <div className='flex flex-col'>
+            <div className='flex flex-col -z-20'>
                 <span className='text-lg font-bold leading-5 text-white'>{NavItemName}</span>
                 <span className='text-sm text-white/50 hidden md:block'>{NavItemDescription}</span>
             </div>
