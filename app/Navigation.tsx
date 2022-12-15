@@ -2,14 +2,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { HomeSVG } from "./components/homeSVG";
 const Navigation = ({ urls }: { urls: Array<string>; }) => {
 
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
+    function onClickHandler() {
+        setIsOpen(!isOpen)
+    }
 
     return (
         <div>
-            <button>hello</button>
+            <HomeSVG handleChange={onClickHandler} />
             <div className={`${isOpen ? "fixed" : "hidden"} bg-slate-100  antialiased text-slate-300 selection:bg-blue-600 selection:text-white`}>
                 <div className='flex flex-col relative w-screen'>
                     <div id='menu' className='min-h-screen z-10 bg-gray-900 text-slate-300 w-64 fixed left-0 h-screen '>
@@ -40,7 +44,7 @@ const Navigation = ({ urls }: { urls: Array<string>; }) => {
                     </ul> */}
                         {/* Navigation Items Example  */}
                         <div id='nav' className='w-full'>
-                            <NavLink href="/" NavItemName="Home" NavItemDescription="HomePage" pathToSvg='/home.svg' isActive={true}/>
+                            <NavLink href="/" NavItemName="Home" NavItemDescription="HomePage" pathToSvg='/vercel.svg' isActive={true}/>
                             {urls.map((el: string) => <NavLink key={`key${el}`} href={`/${el}`} NavItemName={el} NavItemDescription={`Project Showcase: ${el}`} pathToSvg='/vercel.svg' isActive={false} />)}
                         </div>
                     </div>

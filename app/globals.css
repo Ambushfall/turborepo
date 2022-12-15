@@ -27,9 +27,25 @@ a {
     color: white;
     background: black;
   }
+  svg{
+    fill:white
+  }
 }
 
 
 img{
   display: flex;
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+  body {
+    color: black;
+    background: white;
+  }
+  svg{
+    fill:black
+  }
 }
