@@ -1,8 +1,15 @@
+'use client'
 import Link from "next/link";
+import { useEffect, useState } from "react";
+
 
 
 const Navigation = ({ urls }: { urls: Array<string>; }) => {
+  const [isShown, setState] = useState(false)
   const linkStyle = `text-base font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out dark:text-white dark:hover:text-gray-200`
+
+
+  useEffect(() => console.log(document), [])
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,6 +22,7 @@ const Navigation = ({ urls }: { urls: Array<string>; }) => {
             {urls.map((el: string) => <Link className={linkStyle} href={`/${el}`} key={el}>{el}</Link>)}
           </>
         </nav>
+       
       </div>
     </div>
   )
