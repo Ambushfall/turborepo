@@ -1,5 +1,5 @@
 import './globals.css'
-import GradientBG from './gradientBackground'
+import GradientBG from './components/gradientBackground'
 import Navigation from './components/sidebar/page'
 import { promises as fs } from 'fs'
 import path from 'path'

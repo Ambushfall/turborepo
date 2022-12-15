@@ -4,8 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 
 const Navigation = ({ urls }: { urls: Array<string>; }) => {
-    const linkStyle = `text-base font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out dark:text-white dark:hover:text-gray-200`
-
 
     const [isOpen, setIsOpen] = useState(true);
     return (
@@ -16,7 +14,7 @@ const Navigation = ({ urls }: { urls: Array<string>; }) => {
                         <h1 className='text-lg md:text-2xl font-bold text-white'>Ambushfall<span className='text-blue-500'>POC</span>.</h1>
                         <p className='text-slate-500 text-sm'>Nav Menu</p>
                     </div>
-                    <div id='profile' className='px-6 py-10'>
+                    <div id='profile' className='px-6 py-6'>
                         <p className='text-slate-500'>Welcome back,</p>
                         <a href='#' className='inline-flex space-x-2 items-center'>
                             <span>
@@ -38,7 +36,7 @@ const Navigation = ({ urls }: { urls: Array<string>; }) => {
                         </li>)}
                     </ul> */}
                     {/* Navigation Items Example  */}
-                    <div id='nav' className='w-full px-6'>
+                    <div id='nav' className='w-full'>
                         {urls.map((el:string) => {
                             return (
                                 <NavLink key={`key${el}`} href={`/${el}`} NavItemName={el} NavItemDescription={`Project Showcase: ${el}`} SVG={<SVG/>} isActive={true}/>

@@ -1,4 +1,5 @@
 import Todo from './todo';
+import styles from '../page.module.css'
 
 interface Todo {
     id: number;
@@ -16,11 +17,15 @@ async function getTodos() {
 export default async function Page() {
     const todos = await getTodos();
     return (
-        <ul>
-            {todos.map((todo) => (
-                <Todo key={todo.id} {...todo} />
-            ))}
-            {/* {process.env.NEXT_PUBLIC_HOST} */}
-        </ul>
+        <div className={styles.container} >
+            <main className={styles.main}>
+                <ul>
+                    {todos.map((todo) => (
+                        <Todo key={todo.id} {...todo} />
+                    ))}
+                    {/* {process.env.NEXT_PUBLIC_HOST} */}
+                </ul>
+            </main>
+        </div>
     );
 }
