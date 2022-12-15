@@ -1,6 +1,6 @@
 import './globals.css'
 import GradientBG from './components/gradientBackground'
-import Navigation from './components/sidebar/page'
+import Navigation from './Navigation'
 import { promises as fs } from 'fs'
 import path from 'path'
 import { AnalyticsWrapper } from './components/analytics';
