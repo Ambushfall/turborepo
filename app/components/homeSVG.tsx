@@ -1,6 +1,6 @@
 export const HomeSVG = ({ handleChange }: { handleChange: any }) => {
     return (
-        <svg width={60} height={60} onClick={handleChange} className="fixed top-5 right-5 " version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 297 297" xmlSpace="preserve">
+        <svg width={60} height={60} onClick={handleChange} className="md:hidden fixed top-5 right-5 " version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 297 297" xmlSpace="preserve">
             <g>
                 <g>
                     <g>
