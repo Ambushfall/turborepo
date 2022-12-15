@@ -1,6 +1,6 @@
 import './globals.css'
 import GradientBG from './gradientBackground'
-import Navigation from './navigation'
+import Navigation from './components/sidebar/page'
 import { promises as fs } from 'fs'
 import path from 'path'
 import { AnalyticsWrapper } from './components/analytics';
@@ -26,7 +26,7 @@ export default async function RootLayout({
       */}
       <head />
       <body>
-        <Navigation urls={filterDirectories} />
+        <Navigation urls={filterDirectories}/>
         <GradientBG />
         {children}
         <AnalyticsWrapper />

@@ -4,7 +4,7 @@ import { useState } from "react";
 
 
 
-const Navigation = ({ urls }: { urls: Array<string>; }) => {
+const OldNavi = ({ urls }: { urls: Array<string>; }) => {
   const linkStyle = `text-base font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out dark:text-white dark:hover:text-gray-200`
 
 
@@ -65,4 +65,4 @@ function backupOldNavi(urls: any) {
   )
 }
 
-export default Navigation;
+export default OldNavi;
