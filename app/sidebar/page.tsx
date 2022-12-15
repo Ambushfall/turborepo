@@ -6,9 +6,9 @@ const BS = ({ urls }: { urls: Array<string>; }) => {
     const linkStyle = `text-base font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out dark:text-white dark:hover:text-gray-200`
 
 
-  const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
     return (
-        <div className={`bg-slate-100  antialiased text-slate-300 selection:bg-blue-600 selection:text-white`}>
+        <div className={`${isOpen ? "fixed" : "hidden"} bg-slate-100  antialiased text-slate-300 selection:bg-blue-600 selection:text-white`}>
             <div className='flex flex-col relative w-screen'>
                 <div id='menu' className='min-h-screen z-10 text-slate-300 w-64 fixed left-0 h-screen '>
                     <div id='logo' className='my-4 px-6'>
