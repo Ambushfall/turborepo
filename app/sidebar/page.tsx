@@ -1,4 +1,12 @@
-const BS = () => {
+'use client'
+
+import { useState } from "react";
+
+const BS = ({ urls }: { urls: Array<string>; }) => {
+    const linkStyle = `text-base font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out dark:text-white dark:hover:text-gray-200`
+
+
+  const [isOpen, setIsOpen] = useState(false);
     return (
         <div className={`bg-slate-100  antialiased text-slate-300 selection:bg-blue-600 selection:text-white`}>
             <div className='flex flex-col relative w-screen'>
