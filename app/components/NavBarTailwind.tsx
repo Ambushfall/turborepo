@@ -87,6 +87,18 @@ export default function NavBarTailwind({ urls }: { urls?: Array<string>; }) {
 
               <Disclosure.Panel className="md:hidden">
                 <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3 bg-black">
+                <Disclosure.Button
+                      key={'Home'}
+                      as={Link}
+                      href={`/`}
+                      className={classNames(
+                        'text-gray-300 hover:bg-gray-700 hover:text-white',
+                        'block px-3 py-2 rounded-md text-base font-medium'
+                      )}
+                      aria-current={undefined}
+                    >
+                      {`Home`}
+                    </Disclosure.Button>
                   {urls?.map((v, i) => (
                     <Disclosure.Button
                       key={i}

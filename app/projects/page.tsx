@@ -1,7 +1,7 @@
 import { Octokit } from "@octokit/core";
 import styles from '../page.module.css';
 import ProjectModule from "./ProjectModule";
-const { container, main, title, grid, card } = styles;
+const { container, main, title, grid, card, description } = styles;
 const GitHubUserName = 'Ambushfall';
 const octokit = new Octokit({ auth: process.env.PRS_ACC_TOK });
 
@@ -40,7 +40,7 @@ export default async function Page() {
             <div className={container} >
                 <main className={main}>
                     <h1 className={title} >All Of My Projects</h1>
-                    <small>Some useful, some stupid, all fun!</small>
+                    <small className={description} >Some useful, some stupid, all fun!</small>
                     <section>
                         <div></div>
                     </section>
