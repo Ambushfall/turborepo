@@ -2,7 +2,7 @@ import './globals.css'
 import GradientBG from './components/gradientBackground'
 import { promises as fs } from 'fs'
 import path from 'path'
-import Example from './components/NavBarTailwind'
+import NavBarTailwind from './components/NavBarTailwind'
 import { AnalyticsWrapper } from './components/analytics';
 
 export default async function RootLayout({
@@ -24,7 +24,7 @@ export default async function RootLayout({
       */}
       <head />
       <body >
-        <Example urls={filterDirectories} />
+        <NavBarTailwind urls={filterDirectories} />
         <GradientBG />
         {children}
         <AnalyticsWrapper />

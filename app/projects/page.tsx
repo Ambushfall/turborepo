@@ -5,8 +5,7 @@ const { container, main, title, grid, card, description } = styles;
 const GitHubUserName = 'Ambushfall';
 const octokit = new Octokit({ auth: process.env.PRS_ACC_TOK });
 
-
-
+export const revalidate = 60; // revalidate this page every 60 seconds
 
 const getRepos = async () => {
     const request = await octokit.request('GET /users/{username}/repos{?type,sort,direction,per_page,page}', {
@@ -21,8 +20,6 @@ const getRepos = async () => {
     return status === 200 ? data : status
 };
 
-
-
 export default async function Page() {
     const repos = await getRepos()
     console.log('fetched')
@@ -34,7 +31,7 @@ export default async function Page() {
         </div>
     )
     // const request = await octokit.request('GET /users/{username}', { username: GitHubUserName })
-       
+
     return (
         <>
             <div className={container} >
@@ -44,7 +41,7 @@ export default async function Page() {
                     <section>
                         <div></div>
                     </section>
-                    <ProjectModule repos={repos}/>
+                    <ProjectModule repos={repos} />
                     <h4>Made with ❤ by <a href="https://github.com/2KAbhishek/projects">2KAbhishek X OSS</a></h4>
                     <h4>Modified with Next by <a href="https://github.com/Ambushfall/">Ambushfall</a></h4>
                 </main>
