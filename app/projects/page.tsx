@@ -1,3 +1,4 @@
+'use server'
 import { Octokit } from "@octokit/core";
 import styles from '../page.module.css';
 import ProjectModule from "./ProjectModule";
