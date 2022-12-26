@@ -42,6 +42,10 @@ export default async function RootLayout({
                 </ul>
               </div>
             </div>
+
+            {/* 
+            Content Goes here 
+            */}
             <GradientBG />
             {children}
             <AnalyticsWrapper />
