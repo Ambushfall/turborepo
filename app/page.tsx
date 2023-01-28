@@ -1,6 +1,6 @@
 import styles from './page.module.css'
 import Link from 'next/link';
-// import Image from 'next/image'
+
 
 /**
  * TypeDefs
@@ -28,7 +28,6 @@ type JSONApiAmbush = {
 const { container, main, title, grid, card } = styles
 
 const api: JSONApiAmbush = { '$schema': [], Auth: false, Name: 'Ambushfall' };
-const docsLink: linkObj = { href: "/leaveserver", h2Text: "Leave Cherry's", pText: "Find a simple way to stop getting scammed." };
 const cssLink: linkObj = { href: "/editor", h2Text: "CSS Live Editor", pText: "Try out editing CSS Live in browser" };
 const JSONAPI: linkObj = { href: "/api/todos", h2Text: "JSON Api Route", pText: "Directly Route to the Test JSON Api" };
 
@@ -36,7 +35,7 @@ const JSONAPI: linkObj = { href: "/api/todos", h2Text: "JSON Api Route", pText: 
 /**
  * Initialize Link objects to create Cards, add more objects for more cards
  */
-const linkObjs: Array<linkObj> = [docsLink, JSONAPI, cssLink]
+const linkObjs: Array<linkObj> = [JSONAPI, cssLink]
 
 
 
