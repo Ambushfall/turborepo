@@ -1,7 +1,8 @@
 "use client";
+
 import { useRouter } from 'next/navigation';
 
-export interface Todo {
+interface Todo {
     id: number;
     title: string;
     completed: boolean;
@@ -25,19 +26,18 @@ async function update(id: number, completed: boolean, refresh: () => void) {
     refresh();
 }
 
-
-export const TodoList = ({todos}:{todos:Todo[]}) => {
+export default function Todo(todo: Todo) {
     const router = useRouter();
+    // console.log(process.env.NEXT_PUBLIC_HOST)
 
-
-    return <>{todos.map((v, k) =><li key={k}>
-        <input
-            key={k}
-            type="checkbox"
-            checked={v.completed}
-            onChange={(e) => update(v.id, !v.completed, router.refresh)}
-        />
-        {v.title}
-    </li>)}
-    </>;
-};
+    return (
+        <li>
+            <input
+                type="checkbox"
+                checked={todo.completed}
+                onChange={(e) => update(todo.id, !todo.completed, router.refresh)}
+            />
+            {todo.title}
+        </li>
+    );
+}
