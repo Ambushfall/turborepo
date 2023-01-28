@@ -9,7 +9,8 @@ interface Todo {
 
 async function getTodos() {
     // console.log(process.env.NEXT_PUBLIC_HOST)
-    const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/todos`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/todos` , { cache: 'no-store' });
+    // added cache no store as builds were failing with SSG
     const todos: Todo[] = await res.json();
     return todos;
 }
