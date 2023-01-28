@@ -6,7 +6,7 @@ const { container, main, title, grid, card, description } = styles;
 const GitHubUserName = 'Ambushfall';
 const octokit = new Octokit({ auth: process.env.PRS_ACC_TOK });
 
-export const revalidate = 0;
+export const revalidate = 60;
 
 const getRepos = async () => {
     const request = await octokit.request('GET /users/{username}/repos{?type,sort,direction,per_page,page}', {
