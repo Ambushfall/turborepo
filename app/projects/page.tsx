@@ -1,7 +1,7 @@
 
 import styles from '../page.module.css';
 import ProjectModule from "./ProjectModule";
-
+import {getRepos} from "@utils/getRepos"
 const { container, main, title, grid, card, description } = styles;
 const GitHubUserName = 'Ambushfall';
 
@@ -9,8 +9,7 @@ export const revalidate = 60;
 
 
 export default async function Page() {
-    const response = await fetch(`/github/${GitHubUserName}`)
-    const repos = await response.json()
+    const repos = await getRepos(GitHubUserName)
     // console.log(repos)
     if (typeof repos === 'number' || typeof repos.message === 'string')
 
