@@ -3,5 +3,5 @@ import data from 'manifest.json'
 
 export function GET(request: NextRequest) {
 
-  return NextResponse.json(data)
+  return NextResponse.json({data})
 }
