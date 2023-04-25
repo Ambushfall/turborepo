@@ -9,7 +9,7 @@ export const revalidate = 60;
 
 
 export default async function Page() {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/github/${GitHubUserName}`)
+    const response = await fetch(`/github/${GitHubUserName}`)
     const repos = await response.json()
     // console.log(repos)
     if (typeof repos === 'number' || typeof repos.message === 'string')
