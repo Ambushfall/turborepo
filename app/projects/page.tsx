@@ -1,7 +1,7 @@
 
 import styles from '../page.module.css';
 import ProjectModule from "./ProjectModule";
-import {getRepos} from "@utils/getRepos"
+import { getRepos } from '@utils/getrepos';
 const { container, main, title, grid, card, description } = styles;
 const GitHubUserName = 'Ambushfall';
 
