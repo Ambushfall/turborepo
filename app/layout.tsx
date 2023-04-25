@@ -15,7 +15,7 @@ export default async function RootLayout({
   const reg = /^([^.]+)$/g;
   const appDirectory = path.join(process.cwd(), '/app');
   const appFilenames = await fs.readdir(appDirectory)
-  const filterDirectories = appFilenames.filter((e) => e.match(reg) ? e !== 'components' && e !== 'api' : false)
+  const filterDirectories = appFilenames.filter((e) => e.match(reg) ? e !== 'components' && e !== 'api' && e !== 'github' : false)
   return (
     <html lang="en">
       {/*
