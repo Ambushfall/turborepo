@@ -4,7 +4,7 @@ import { GitHubUserName, hideForks, descriptionClassName, linkContainerDivStyle 
 
 export const RepositoryModule = ({ repoData  }: { repoData: any[]; }) => {
     const userHome = `https://github.com/${GitHubUserName}`;
-
+    // console.log(repoData)
 
     return <>{repoData.map((v, k) => hideForks && v.fork ? false :
         <li className='inline-block max-w-xs max-h-min m-4 p-6 border-[#eaeaea] dark:border-[#222] text-center align-middle bg-inherit border-2 rounded-xl hover:border-slate-200 hover:shadow-lg hover:shadow-slate-200' key={k}>

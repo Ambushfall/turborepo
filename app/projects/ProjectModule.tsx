@@ -5,6 +5,7 @@ import styles from '../page.module.css'
 import { RepositoryModule } from './RepositoryModule';
 
 export default function ProjectModule({ repos }: { repos: any[] }) {
+    // console.log(repos)
     const [query, setQuery] = useState('')
     // const [data, setData] = useState({ Array: [] });
     // const keys = ['']
@@ -50,6 +51,6 @@ export default function ProjectModule({ repos }: { repos: any[] }) {
 }
 
 function searchFunction(repos: any[], query: string): any {
-    return repos.filter((e, i) => e.name.toLowerCase().replaceAll(' ', '').replaceAll('-', '').includes(query.toLowerCase().replaceAll(' ', '').replaceAll('-', '')));
+    return repos.filter((e, i) => e.name.toString().toLowerCase().replaceAll(' ', '').replaceAll('-', '').includes(query.toLowerCase().replaceAll(' ', '').replaceAll('-', '')));
 }
 
