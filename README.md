@@ -72,6 +72,7 @@ experimentalapp
  │       ├── page.tsx
  │       ├── ProjectModule.tsx
  │       └── RepositoryModule.tsx
+ ├─> docs
  ├── dree.config.json
  ├─> helpers
  │   └── toPascalCase.tsx
@@ -86,6 +87,7 @@ experimentalapp
  ├─> target
  │   └── npmlist.json
  ├── tsconfig.json
+ ├── typedoc.json
  └─> utils
      └── getrepos.ts
 ```
