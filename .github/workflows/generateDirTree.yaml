@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: main
+          ref: master
 
       # This is how you use the ga-dree action
       - name: Inject dree
