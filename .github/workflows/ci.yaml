@@ -34,9 +34,10 @@ jobs:
         with:
           branch: gh-pages
           folder: docs
-          
+
       - name: Deploy Images 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
           folder: public
+          target-folder: 'public'
