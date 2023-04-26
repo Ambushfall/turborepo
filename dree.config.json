@@ -1,0 +1,13 @@
+{
+    "exclude": [ 
+        "/node_modules/**",
+        "/.git/**",
+        "/.next/**",
+        "/.env",
+        "/.env*.local",
+        "/.vscode/**",
+        "/next-env.d.ts",
+        "/worktree.txt",
+        "/public/**/*"
+    ]
+}
