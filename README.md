@@ -50,6 +50,7 @@ experimentalapp
  │   │   ├── gradientBackground.tsx
  │   │   ├── homeSVG.tsx
  │   │   └── NavLinkTailwind.tsx
+ │   ├── css.mod.d.ts
  │   ├─> editor
  │   │   └── page.tsx
  │   ├── error.tsx
@@ -72,7 +73,6 @@ experimentalapp
  │       ├── page.tsx
  │       ├── ProjectModule.tsx
  │       └── RepositoryModule.tsx
- ├─> docs
  ├── dree.config.json
  ├─> helpers
  │   └── toPascalCase.tsx
