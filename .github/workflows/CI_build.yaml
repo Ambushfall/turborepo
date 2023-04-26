@@ -32,15 +32,11 @@ jobs:
       - name: Create the docs directory locally in CI
         run: npm run docs
 
+      - name: Test copying Public to docs
+        run: cp -r public docs 
+
       - name: Deploy Docs 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
           folder: docs
-
-      - name: Deploy Images 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
-        with:
-          branch: gh-pages
-          folder: public
-          target-folder: "public"
