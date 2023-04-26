@@ -1,1 +1,1 @@
-declare module 'page.module.css';
+declare module '*.css';
