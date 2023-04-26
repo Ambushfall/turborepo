@@ -39,7 +39,58 @@ Development
 > Folder Structure :
 
 
-[//]: # (dree)
+[//]: # (dree - BEGIN)
+```
+experimentalapp
+ ├── .eslintrc.json
+ ├── README.md
+ ├─> app
+ │   ├── Footer.tsx
+ │   ├─> api
+ │   │   └── route.ts
+ │   ├─> components
+ │   │   ├── NavLinkTailwind.tsx
+ │   │   ├── analytics.tsx
+ │   │   ├── gradientBackground.tsx
+ │   │   └── homeSVG.tsx
+ │   ├─> editor
+ │   │   └── page.tsx
+ │   ├── error.tsx
+ │   ├─> gallery
+ │   │   ├── Gallery.tsx
+ │   │   └── page.tsx
+ │   ├─> github
+ │   │   └─> [userName]
+ │   │       └── route.ts
+ │   ├── globals.css
+ │   ├── head.tsx
+ │   ├── layout.tsx
+ │   ├── loading.tsx
+ │   ├── page.module.css
+ │   ├── page.tsx
+ │   └─> projects
+ │       ├── Constants.ts
+ │       ├── ProjectModule.tsx
+ │       ├── RepositoryModule.tsx
+ │       ├── displayProfile.tsx
+ │       └── page.tsx
+ ├── dree.config.json
+ ├─> helpers
+ │   └── toPascalCase.tsx
+ ├── manifest.json
+ ├── next.config.js
+ ├── package-lock.json
+ ├── package.json
+ ├── postcss.config.js
+ ├─> public
+ ├── tailwind.config.js
+ ├─> target
+ │   └── npmlist.json
+ ├── tsconfig.json
+ └─> utils
+     └── getrepos.ts
+```
+[//]: # (dree - END)
 
 
 
