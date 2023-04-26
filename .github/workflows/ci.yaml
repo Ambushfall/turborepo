@@ -5,9 +5,11 @@ on: [push, pull_request]
 jobs:
   build_and_lint:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+        with:
+          ref: master
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
@@ -24,7 +26,7 @@ jobs:
         run: npm ci
 
       - name: Create the docs directory locally in CI
-        run: npx typedoc
+        run: npm run docs
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
