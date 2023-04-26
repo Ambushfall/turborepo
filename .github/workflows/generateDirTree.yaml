@@ -28,3 +28,12 @@ jobs:
         with:
           commit_message: "docs: inject dree (automated commit)"
           branch: master
+
+      # In this step build docs
+      - name: Build documentation
+        run: npm run docs
+      - name: Deploy documentation to Github Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
