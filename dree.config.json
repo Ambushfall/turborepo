@@ -9,5 +9,7 @@
         "/next-env.d.ts",
         "/worktree.txt",
         "/public/**/*"
-    ]
+    ],
+    "showHidden": false,
+    "sorted" : true
 }
