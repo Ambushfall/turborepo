@@ -8,7 +8,8 @@
         "/.vscode/**",
         "/next-env.d.ts",
         "/worktree.txt",
-        "/public/**/*"
+        "/public/**/*",
+        "/docs/**/*"
     ],
     "showHidden": false,
     "sorted" : true
