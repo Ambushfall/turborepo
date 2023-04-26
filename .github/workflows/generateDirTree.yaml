@@ -13,6 +13,13 @@ jobs:
         with:
           ref: master
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - name: Install dependencies
+        run: npm ci
+
       # This is how you use the ga-dree action
       - name: Inject dree
         uses: "euberdeveloper/ga-dree@main"
