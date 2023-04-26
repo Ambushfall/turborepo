@@ -1,17 +1,4 @@
-<style>
-  img{
-    max-width: 50%;
-    max-height: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    /* width: 50%; */
-  }
-</style>
-
 ![ExperimentalApp](/public/midj/grid_20.png)
-
-
 
 ## ExperimentalApp
 
