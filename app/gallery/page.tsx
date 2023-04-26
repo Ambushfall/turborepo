@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs'
 import path from 'path'
 import React from 'react';
-import styles from '../page.module.css'
+import styles from '@app/page.module.css'
 import { Gallery } from './Gallery';
 
 const { container, main, title } = styles

@@ -1,5 +1,5 @@
 
-import styles from '../page.module.css';
+import styles from '@app/page.module.css';
 import ProjectModule from "./ProjectModule";
 import { getRepos } from '@utils/getrepos';
 const { container, main, title, grid, card, description } = styles;
