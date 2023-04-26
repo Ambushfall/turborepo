@@ -6,6 +6,5 @@
     "githubPages": false,
     "excludeExternals": true,
     "excludePrivate": true,
-    "excludeNotExported":true,
     "excludeProtected": true
 }
