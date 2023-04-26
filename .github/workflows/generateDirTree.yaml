@@ -2,7 +2,7 @@ name: generateReadmeTree
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   build:
@@ -28,4 +28,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "docs: inject dree (automated commit)"
-          branch: main
+          branch: master
