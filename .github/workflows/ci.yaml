@@ -3,7 +3,7 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  build_and_lint:
+  create_type_docs:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,8 +29,14 @@ jobs:
       - name: Create the docs directory locally in CI
         run: npm run docs
 
-      - name: Deploy 🚀
+      - name: Deploy Docs 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
           folder: docs
+          
+      - name: Deploy Images 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: public
