@@ -3,4 +3,5 @@
     "entryPoints": ["./app"],
     "entryPointStrategy": "expand",
     "out": "docs",
+    "githubPages": false
 }
