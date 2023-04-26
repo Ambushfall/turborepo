@@ -20,7 +20,7 @@ jobs:
           showMadeWithDree: "false" # Does not add "Made with dree"
           # comment: "my-custom-dree-comment" # [//]: # (comment) Default dree
           root: "./" # The root directory of the generated tree
-          exclude: "node_modules, .next, .vscode,.env,.env.local" # The files/folders to exclude from the tree
+          exclude: "node_modules,.next,.vscode,.env,.env.local,.git," # The files/folders to exclude from the tree
           targetPath: "./README.md" # The path of the file where the tree should be injected
 
       # In this step the changes to the branch are committed
