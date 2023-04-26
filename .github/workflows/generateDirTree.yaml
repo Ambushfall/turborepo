@@ -19,7 +19,7 @@ jobs:
         with:
           showMadeWithDree: "false" # Does not add "Made with dree"
           # comment: "my-custom-dree-comment" # [//]: # (comment) Default dree
-          root: "" # The root directory of the generated tree
+          # root: "" # The root directory of the generated tree
           exclude: ".git/**, .next/**, node_modules/**, .env*" # The files/folders to exclude from the tree
           targetPath: "./README.md" # The path of the file where the tree should be injected
 
