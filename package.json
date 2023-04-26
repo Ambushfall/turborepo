@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generateTree": "pwsh -command Tree -exclude node_modules, .next, .vscode,.env,.env.local,worktree.txt -ASCII -IncludeFiles > worktree.txt"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.7",
