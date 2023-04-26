@@ -3,5 +3,9 @@
     "entryPoints": ["./app"],
     "entryPointStrategy": "expand",
     "out": "docs",
-    "githubPages": false
+    "githubPages": false,
+    "excludeExternals": true,
+    "excludePrivate": true,
+    "excludeNotExported":true,
+    "excludeProtected": true
 }
