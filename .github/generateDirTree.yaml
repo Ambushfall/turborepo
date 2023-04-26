@@ -1,0 +1,31 @@
+name: generateReadmeTree
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: main
+
+      # This is how you use the ga-dree action
+      - name: Inject dree
+        uses: "euberdeveloper/ga-dree@main"
+        with:
+          showMadeWithDree: "false" # Does not add "Made with dree"
+          # comment: "my-custom-dree-comment" # [//]: # (comment) Default dree
+          root: "./" # The root directory of the generated tree
+          exclude: "node_modules, .next, .vscode,.env,.env.local" # The files/folders to exclude from the tree
+          targetPath: "./README.md" # The path of the file where the tree should be injected
+
+      # In this step the changes to the branch are committed
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "docs: inject dree (automated commit)"
+          branch: main
