@@ -42,20 +42,18 @@ Development
 [//]: # (dree - BEGIN)
 ```
 experimentalapp
- ├── .eslintrc.json
- ├── README.md
  ├─> app
- │   ├── Footer.tsx
  │   ├─> api
  │   │   └── route.ts
  │   ├─> components
- │   │   ├── NavLinkTailwind.tsx
  │   │   ├── analytics.tsx
  │   │   ├── gradientBackground.tsx
- │   │   └── homeSVG.tsx
+ │   │   ├── homeSVG.tsx
+ │   │   └── NavLinkTailwind.tsx
  │   ├─> editor
  │   │   └── page.tsx
  │   ├── error.tsx
+ │   ├── Footer.tsx
  │   ├─> gallery
  │   │   ├── Gallery.tsx
  │   │   └── page.tsx
@@ -70,10 +68,10 @@ experimentalapp
  │   ├── page.tsx
  │   └─> projects
  │       ├── Constants.ts
- │       ├── ProjectModule.tsx
- │       ├── RepositoryModule.tsx
  │       ├── displayProfile.tsx
- │       └── page.tsx
+ │       ├── page.tsx
+ │       ├── ProjectModule.tsx
+ │       └── RepositoryModule.tsx
  ├── dree.config.json
  ├─> helpers
  │   └── toPascalCase.tsx
@@ -83,6 +81,7 @@ experimentalapp
  ├── package.json
  ├── postcss.config.js
  ├─> public
+ ├── README.md
  ├── tailwind.config.js
  ├─> target
  │   └── npmlist.json
