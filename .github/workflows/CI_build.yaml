@@ -15,25 +15,25 @@ jobs:
         with:
           ref: master
 
-      - uses: actions/setup-node@v3
+      - name: PNPM Setup
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 8.3.1
+          run_install: false
+
+      - name: Node Setup
+        uses: actions/setup-node@v3
         with:
           node-version: latest
+          cache: 'pnpm'
 
-      - name: Retrieve the cached "node_modules" directory (if present)
-        uses: actions/cache@v3
-        id: node-cache
-        with:
-          path: node_modules
-          key: node-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
-
-      - name: Install dependencies (if the cached directory was not found)
-        if: steps.node-cache.outputs.cache-hit != 'true'
-        run: npm ci
+      - name: Install dependencies
+        run: pnpm install
 
       - name: Create the docs directory locally in CI
         id: create-docs
         run: >
-          npm run docs &&
+          pnpm run docs &&
           echo "STATE=true" >> "$GITHUB_OUTPUT"
 
       - name: Test copying Public to docs
