@@ -1,7 +1,4 @@
 name: CI build
-env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
 on: [push]
 
@@ -30,12 +27,22 @@ jobs:
         run: npm ci
 
       - name: Create the docs directory locally in CI
-        run: npm run docs
-
+        id: create-docs
+        run: > 
+          npm run docs
+          echo "STATE=true" >> "$GITHUB_OUTPUT"
+      
       - name: Test copying Public to docs
-        run: cp -r public docs 
+        id: copy-images
+        if: steps.create-docs.outputs.STATE == 'true'
+        run: > 
+          cp -r public docs
+          cp .gitignore docs
+          echo steps.create-docs.outputs >> docs/output.txt
+          echo "COPIED=true" >> "$GITHUB_OUTPUT"
 
       - name: Deploy Docs 🚀
+        if: steps.copy-images.outputs.COPIED == 'true'
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
