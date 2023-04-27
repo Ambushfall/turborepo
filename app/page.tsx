@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 
 /**
- * TypeDefs test - FINAL
+ * Typedefs (GA Works, test VercelCD)
  */
 type linkObj = {
   href: string,
