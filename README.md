@@ -78,7 +78,6 @@ experimentalapp
  │   └── toPascalCase.tsx
  ├── manifest.json
  ├── next.config.js
- ├── package-lock.json
  ├── package.json
  ├── pnpm-lock.yaml
  ├── postcss.config.js
