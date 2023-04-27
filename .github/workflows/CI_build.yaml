@@ -1,6 +1,10 @@
 name: CI build
 
-on: [push]
+on:
+  workflow_run:
+    workflows: ["generateReadmeTree"]
+    types:
+      - completed
 
 jobs:
   create_type_docs:
