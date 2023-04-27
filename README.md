@@ -22,7 +22,7 @@
 ## Quick start
 
 ```code
-npm i && npm run dev
+pnpm i && pnpm run dev
 ```
 
 
