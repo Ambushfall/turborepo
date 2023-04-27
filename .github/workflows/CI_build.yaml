@@ -29,16 +29,16 @@ jobs:
       - name: Create the docs directory locally in CI
         id: create-docs
         run: > 
-          npm run docs
+          npm run docs &&
           echo "STATE=true" >> "$GITHUB_OUTPUT"
       
       - name: Test copying Public to docs
         id: copy-images
         if: steps.create-docs.outputs.STATE == 'true'
         run: > 
-          cp -r public docs
-          cp .gitignore docs
-          echo steps.create-docs.outputs >> docs/output.txt
+          cp -r public docs &&
+          cp .gitignore docs &&
+          echo steps.create-docs.outputs >> docs/output.txt &
           echo "COPIED=true" >> "$GITHUB_OUTPUT"
 
       - name: Deploy Docs 🚀
