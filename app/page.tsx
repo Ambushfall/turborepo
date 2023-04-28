@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 
 /**
- * Typedefs test cache
+ * Typedefs test cache v2
  */
 type linkObj = {
   href: string,
