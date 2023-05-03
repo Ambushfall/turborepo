@@ -67,12 +67,13 @@ experimentalapp
  │   ├── loading.tsx
  │   ├── page.module.css
  │   ├── page.tsx
- │   └─> projects
- │       ├── Constants.ts
- │       ├── displayProfile.tsx
- │       ├── page.tsx
- │       ├── ProjectModule.tsx
- │       └── RepositoryModule.tsx
+ │   ├─> projects
+ │   │   ├── Constants.ts
+ │   │   ├── displayProfile.tsx
+ │   │   ├── page.tsx
+ │   │   ├── ProjectModule.tsx
+ │   │   └── RepositoryModule.tsx
+ │   └── server.mod.d.ts
  ├── dree.config.json
  ├─> helpers
  │   └── toPascalCase.tsx
@@ -89,6 +90,7 @@ experimentalapp
  ├── tsconfig.json
  ├── typedoc.json
  └─> utils
+     ├── getDirs.ts
      └── getrepos.ts
 ```
 [//]: # (dree - END)
