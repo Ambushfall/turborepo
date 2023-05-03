@@ -1,5 +1,7 @@
+import 'server-only';
 import styles from '@app/page.module.css'
 import Link from 'next/link';
+import { getDirs } from '@utils/getDirs'
 
 
 /**
@@ -20,7 +22,6 @@ type JSONApiAmbush = {
   '$schema'?: []
 }
 
-
 /**
  * Constants and destructures
 */
@@ -29,7 +30,7 @@ const { container, main, title, grid, card } = styles
 
 const api: JSONApiAmbush = { '$schema': [], Auth: false, Name: 'Ambushfall' };
 const cssLink: linkObj = { href: "/editor", h2Text: "CSS Live Editor", pText: "Try out editing CSS Live in browser" };
-const JSONAPI: linkObj = { href: "/api/todos", h2Text: "JSON Api Route", pText: "Directly Route to the Test JSON Api" };
+const JSONAPI: linkObj = { href: "/api", h2Text: "JSON Api Route", pText: "Directly Route to the Test JSON Api" };
 
 
 /**
@@ -39,7 +40,15 @@ const linkObjs: Array<linkObj> = [JSONAPI, cssLink]
 
 
 
-export default function Home() {
+export default async function Home() {
+
+  const data = await getDirs();
+  data.forEach(e => {
+    const obj: linkObj = { href: `/${e}`, h2Text: `${e} route`, pText: `Test ${e} route` }
+    linkObjs.push(obj)
+  })
+  // console.log(data)
+
   return (
     <div className={container}>
       <main className={main}>
