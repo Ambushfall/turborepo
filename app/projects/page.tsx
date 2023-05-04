@@ -5,7 +5,7 @@ import { getRepos } from '@utils/getrepos';
 const { container, main, title, grid, card, description } = styles;
 const GitHubUserName = 'Ambushfall';
 
-export const revalidate = 60;
+// export const revalidate = 60;
 
 
 export default async function Page() {
