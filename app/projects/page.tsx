@@ -1,16 +1,16 @@
-
 import styles from '@app/page.module.css';
 import ProjectModule from "./ProjectModule";
-import { getRepos } from '@utils/getrepos';
 const { container, main, title, grid, card, description } = styles;
 const GitHubUserName = 'Ambushfall';
 
-export const revalidate = 60;
 
+async function fetchRepos(username: string) {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/github/${username}`);
+    return await response.json();
+}
 
 export default async function Page() {
-    const repos = await getRepos(GitHubUserName)
-    // console.log(repos)
+    const repos = await fetchRepos(GitHubUserName);
     if (typeof repos === 'number' || typeof repos.message === 'string')
 
         return (
@@ -20,7 +20,6 @@ export default async function Page() {
                 </main>
             </div>
         )
-    // const request = await octokit.request('GET /users/{username}', { username: GitHubUserName })
 
     return (
         <>
