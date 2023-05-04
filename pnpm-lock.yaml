@@ -55,6 +55,9 @@ dependencies:
   react-photo-album:
     specifier: ^1.16.1
     version: 1.16.1(react@18.2.0)
+  replicate:
+    specifier: ^0.11.1
+    version: 0.11.1
   server-only:
     specifier: ^0.0.1
     version: 0.0.1
@@ -2194,6 +2197,10 @@ packages:
   /regexpp@3.2.0:
     resolution: {integrity: sha512-pq2bWo9mVD43nbts2wGv17XLiNLya+GklZ8kaDLV2Z08gDCsGpnKn9BFMepvWuHCbyVvY7J5o5+BVvoQbmlJLg==}
     engines: {node: '>=8'}
+    dev: false
+
+  /replicate@0.11.1:
+    resolution: {integrity: sha512-PJ5qFQj7y4JfajiRg06ly1NYiH3z2QTuEGbNTBRO5t53dv55eDAc0gOqfVMUYbOvXi9m5jkDpz+W2TwSO8YiOg==}
     dev: false
 
   /resolve-from@4.0.0:
