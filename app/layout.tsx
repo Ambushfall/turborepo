@@ -1,9 +1,9 @@
 import './globals.css'
 import GradientBG from './components/gradientBackground'
-
+import { promises as fs } from 'fs'
+import path from 'path'
 import { AnalyticsWrapper } from './components/analytics';
 import { NavLinkTailwind } from './components/NavLinkTailwind';
-import { getDirs } from '@utils/getDirs';
 
 
 export default async function RootLayout({
@@ -12,7 +12,10 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
 
-  const filterDirectories = await getDirs()
+  const reg = /^([^.]+)$/g;
+  const appDirectory = path.join(process.cwd(), '/app');
+  const appFilenames = await fs.readdir(appDirectory)
+  const filterDirectories = appFilenames.filter((e) => e.match(reg) ? e !== 'components' && e !== 'api' && e !== 'github' : false)
   return (
     <html lang="en">
       {/*
