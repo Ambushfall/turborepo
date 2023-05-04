@@ -73,6 +73,8 @@ experimentalapp
  │   │   ├── page.tsx
  │   │   ├── ProjectModule.tsx
  │   │   └── RepositoryModule.tsx
+ │   ├─> replicate
+ │   │   └── page.tsx
  │   └── server.mod.d.ts
  ├── dree.config.json
  ├─> helpers
@@ -80,6 +82,11 @@ experimentalapp
  ├── manifest.json
  ├── next.config.js
  ├── package.json
+ ├─> pages
+ │   └─> api
+ │       └─> predictions
+ │           ├── [id].ts
+ │           └── index.ts
  ├── pnpm-lock.yaml
  ├── postcss.config.js
  ├─> public
