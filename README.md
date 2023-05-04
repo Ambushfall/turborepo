@@ -83,10 +83,12 @@ experimentalapp
  ├── next.config.js
  ├── package.json
  ├─> pages
- │   └─> api
- │       └─> predictions
- │           ├── [id].ts
- │           └── index.ts
+ │   ├─> api
+ │   │   └─> predictions
+ │   │       ├── [id].ts
+ │   │       └── index.ts
+ │   └─> swr
+ │       └── index.js
  ├── pnpm-lock.yaml
  ├── postcss.config.js
  ├─> public
