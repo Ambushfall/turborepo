@@ -45,10 +45,10 @@ export default async function Home() {
   const data = await getDirs();
   data.forEach(e => {
     const obj: linkObj = { href: `/${e}`, h2Text: `${e} route`, pText: `Test ${e} route` }
-    linkObjs.push(obj)
+    const index = linkObjs.findIndex(x => x.href == obj.href);
+    index === -1 ? linkObjs.push(obj) : false
   })
-  // console.log(data)
-
+  
   return (
     <div className={container}>
       <main className={main}>
@@ -63,7 +63,14 @@ function HeadingTitle(props: JSONApiAmbush) {
   const { Name, Auth } = props
   // console.log(props)
   return (
-    <h1 className={title}>
+    <h1 className="
+    text-6xl font-extrabold 
+    text-transparent bg-clip-text
+    bg-gradient-to-b from-[#ffffff] to-[#aaaaaa]
+    dark:invert-0
+    invert
+    text-center
+    tracking-tight">
       {Name} {Auth}
     </h1>
   )

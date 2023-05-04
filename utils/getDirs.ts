@@ -13,6 +13,6 @@ export const getDirs = cache(async () => {
     const appDirectory = path.join(process.cwd(), '/app');
     const appFilenames = await fs.readdir(appDirectory)
     const filterDirectories = appFilenames.filter((e) => e.match(reg) ? e !== 'components' && e !== 'api' && e !== 'github' : false)
-
+    // console.log(filterDirectories)
     return filterDirectories
 });
