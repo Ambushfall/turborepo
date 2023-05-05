@@ -100,7 +100,6 @@ experimentalapp
  ├── tsconfig.json
  ├── typedoc.json
  └─> utils
-     ├── getDirs.ts
      └── getrepos.ts
 ```
 [//]: # (dree - END)
