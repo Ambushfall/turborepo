@@ -1,8 +1,7 @@
 import 'server-only';
 import styles from '@app/page.module.css'
 import Link from 'next/link';
-import { getDirs } from '@utils/getDirs'
-
+import {paths} from 'paths.json'
 
 /**
  * Typedefs test cache v2
@@ -42,8 +41,8 @@ const linkObjs: Array<linkObj> = [JSONAPI, cssLink]
 
 export default async function Home() {
 
-  const data = await getDirs();
-  data.forEach(e => {
+  const pathnames = paths
+  pathnames.forEach(e => {
     const obj: linkObj = { href: `/${e}`, h2Text: `${e} route`, pText: `Test ${e} route` }
     const index = linkObjs.findIndex(x => x.href == obj.href);
     index === -1 ? linkObjs.push(obj) : false

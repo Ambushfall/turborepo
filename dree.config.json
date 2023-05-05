@@ -9,7 +9,8 @@
         "/next-env.d.ts",
         "/worktree.txt",
         "/public/**/*",
-        "/docs/**/*"
+        "/docs/**/*",
+        "/paths.json"
     ],
     "showHidden": false,
     "sorted" : true
