@@ -16,6 +16,9 @@ docs/*
 /.next/
 /out/
 
+# prebuild pathnames
+paths.json
+
 # production
 /build
 
