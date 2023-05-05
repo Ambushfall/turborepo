@@ -3,6 +3,7 @@ import { getDirs } from '@utils/getDirs';
 import GradientBG from './components/gradientBackground'
 import { AnalyticsWrapper } from './components/analytics';
 import { NavLinkTailwind } from './components/NavLinkTailwind';
+import data from 'paths.json'
 
 
 
@@ -12,7 +13,7 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
 
-  const filterDirectories = await getDirs()
+  const filterDirectories = data.paths
   return (
     <html lang="en">
       {/*
