@@ -35,7 +35,7 @@ export default async function RootLayout({
               <div className="flex-none hidden lg:block">
                 <ul className="menu menu-horizontal">
                   <NavLinkTailwind href='/' NavItemName='Home' />
-                  {filterDirectories?.map((el: string) => <NavLinkTailwind key={`horizontal${el}`} href={`/${el}`} NavItemName={el} />)}
+                  {filterDirectories?.map((item: string, index:number) => <NavLinkTailwind key={index} href={`/${item}`} NavItemName={item} />)}
                 </ul>
               </div>
             </div>
