@@ -6,8 +6,7 @@ const { container, main, title } = styles
 
 const Page = async () => {
 
-    const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/imagelist`)
-    const data = await res.json()
+    const data = await fetchGallery();
 
     return (
         <div className={container}>
@@ -28,3 +27,8 @@ const Title = ({ Name, Title }: { Name: string, Title: String }) => {
 }
 
 export default Page;
+
+async function fetchGallery() {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/imagelist`);
+    return await res.json();
+}
