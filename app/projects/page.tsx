@@ -3,6 +3,8 @@ import ProjectModule from "./ProjectModule";
 const { container, main, title, grid, card, description } = styles;
 const GitHubUserName = 'Ambushfall';
 
+export const revalidate = 60;
+// false | 'force-cache' | 0 | number
 
 async function fetchRepos(username: string) {
     const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/github/${username}`);
