@@ -1,20 +1,16 @@
 import styles from '@app/page.module.css'
 import { Gallery } from '@components/Gallery';
 import { twtitle } from '@tw/styles';
+import { getImages } from '@utils/getImages';
 
 const { container, main, title } = styles
 
 export const revalidate = 10;
 
 
-async function fetchGallery() {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/imagelist`);
-    return await res.json();
-}
-
 export default async function Page() {
 
-    const data = await fetchGallery();
+    const data = await getImages()
 
     return (
         <>
