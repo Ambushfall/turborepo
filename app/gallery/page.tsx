@@ -8,7 +8,8 @@ import { twtitle } from '@tw/styles';
 
 const { container, main, title } = styles
 
-export const revalidate = 10;
+// export const revalidate = 10;
+export const dynamic = 'force-static';
 
 
 export default async function Page() {
