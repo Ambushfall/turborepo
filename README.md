@@ -44,8 +44,6 @@ Development
 experimentalapp
  ├─> app
  │   ├─> api
- │   │   ├─> imagelist
- │   │   │   └── route.ts
  │   │   └── route.ts
  │   ├─> components
  │   │   ├── analytics.tsx
@@ -102,7 +100,6 @@ experimentalapp
  │   └── styles.ts
  ├── typedoc.json
  └─> utils
-     ├── getImages.ts
      └── getrepos.ts
 ```
 [//]: # (dree - END)
