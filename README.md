@@ -44,6 +44,8 @@ Development
 experimentalapp
  ├─> app
  │   ├─> api
+ │   │   ├─> images
+ │   │   │   └── route.ts
  │   │   └── route.ts
  │   ├─> components
  │   │   ├── analytics.tsx
@@ -83,12 +85,10 @@ experimentalapp
  ├── next.config.js
  ├── package.json
  ├─> pages
- │   ├─> api
- │   │   └─> predictions
- │   │       ├── [id].ts
- │   │       └── index.ts
- │   └─> swr
- │       └── index.js
+ │   └─> api
+ │       └─> predictions
+ │           ├── [id].ts
+ │           └── index.ts
  ├── pnpm-lock.yaml
  ├── postcss.config.js
  ├── prebuild.js
@@ -100,6 +100,7 @@ experimentalapp
  ├── tsconfig.json
  ├── typedoc.json
  └─> utils
+     ├── getImages.ts
      └── getrepos.ts
 ```
 [//]: # (dree - END)
