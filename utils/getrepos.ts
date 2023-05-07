@@ -1,4 +1,3 @@
-import 'server-only';
 
 export const getRepos = async (userName: string) => {
   // .........

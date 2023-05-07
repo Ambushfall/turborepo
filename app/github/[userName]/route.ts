@@ -1,4 +1,4 @@
-import { getRepos } from '@utils/.';
+import { getRepos } from '@utils/getrepos';
 import { NextResponse, NextRequest } from 'next/server';
 
 
@@ -7,5 +7,6 @@ export async function GET(request: NextRequest, {
 }: {
     params: { userName: string };
 }) {
-    return NextResponse.json(await getRepos(userName))
+    const data = await getRepos(userName)
+    return NextResponse.json(data)
 }

@@ -2,7 +2,7 @@ import './globals.css'
 import GradientBG from '@components/gradientBackground'
 import { AnalyticsWrapper } from '@components/analytics';
 import { NavLinkTailwind } from '@components/NavLinkTailwind';
-import data from 'paths.json'
+import data from '../paths.json'
 
 
 export default async function RootLayout({

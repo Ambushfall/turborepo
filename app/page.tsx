@@ -1,7 +1,7 @@
 import 'server-only';
 import styles from '@app/page.module.css'
 import Link from 'next/link';
-import data from 'paths.json'
+import data from '../paths.json'
 
 /**
  * Typedefs test cache v2
