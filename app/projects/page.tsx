@@ -7,6 +7,7 @@ export const revalidate = 10;
 // false | 'force-cache' | 0 | number
 
 async function fetchRepos(username: string) {
+    console.warn(process.env.NEXT_PUBLIC_HOST)
     const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/github/${username}`);
     return await response.json();
 }
