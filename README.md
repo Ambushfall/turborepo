@@ -79,6 +79,7 @@ experimentalapp
  ├── dree.config.json
  ├─> helpers
  │   └── toPascalCase.tsx
+ ├── json-file.d.ts
  ├── manifest.json
  ├── next.config.js
  ├── package.json
