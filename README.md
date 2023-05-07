@@ -44,11 +44,12 @@ Development
 experimentalapp
  ├─> app
  │   ├─> api
- │   │   ├─> images
+ │   │   ├─> imagelist
  │   │   │   └── route.ts
  │   │   └── route.ts
  │   ├─> components
  │   │   ├── analytics.tsx
+ │   │   ├── Gallery.tsx
  │   │   ├── gradientBackground.tsx
  │   │   ├── homeSVG.tsx
  │   │   └── NavLinkTailwind.tsx
@@ -58,7 +59,6 @@ experimentalapp
  │   ├── error.tsx
  │   ├── Footer.tsx
  │   ├─> gallery
- │   │   ├── Gallery.tsx
  │   │   └── page.tsx
  │   ├─> github
  │   │   └─> [userName]
@@ -98,6 +98,8 @@ experimentalapp
  ├─> target
  │   └── npmlist.json
  ├── tsconfig.json
+ ├─> tw
+ │   └── styles.ts
  ├── typedoc.json
  └─> utils
      ├── getImages.ts
