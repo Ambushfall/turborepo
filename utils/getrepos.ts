@@ -10,14 +10,11 @@ export const getRepos = async (userName: string) => {
         Authorization:
           process.env.PRS_ACC_TOK
       },
-      next: {
-        revalidate: 20
-      }
+      // next: { revalidate: 10 }
     }
     try {
-      
       const res = await fetch(route, parameters)
-      const data : any[] = await res.json();
+      const data: any[] = await res.json();
       data.sort((a, b) => b.forks_count - a.forks_count);
       data.sort((a, b) => b.stargazers_count - a.stargazers_count);
       return data

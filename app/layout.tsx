@@ -4,7 +4,7 @@ import { AnalyticsWrapper } from './components/analytics';
 import { NavLinkTailwind } from './components/NavLinkTailwind';
 import data from 'paths.json'
 
-
+export const revalidate = 20;
 
 export default async function RootLayout({
   children,
