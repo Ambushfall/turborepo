@@ -100,7 +100,9 @@ experimentalapp
  │   └── styles.ts
  ├── typedoc.json
  └─> utils
-     └── getrepos.ts
+     ├── getImages.ts
+     ├── getrepos.ts
+     └── index.ts
 ```
 [//]: # (dree - END)
 
