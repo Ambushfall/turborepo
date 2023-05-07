@@ -10,7 +10,7 @@ export const getRepos = async (userName: string) => {
         Authorization:
           process.env.PRS_ACC_TOK
       },
-      // next: { revalidate: 10 }
+      next: { revalidate: 10 }
     }
     try {
       const res = await fetch(route, parameters)

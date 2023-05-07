@@ -3,7 +3,7 @@ import ProjectModule from "./ProjectModule";
 const { container, main, title, grid, card, description } = styles;
 const GitHubUserName = 'Ambushfall';
 
-// export const revalidate = 20;
+export const revalidate = 10;
 // false | 'force-cache' | 0 | number
 
 async function fetchRepos(username: string) {
