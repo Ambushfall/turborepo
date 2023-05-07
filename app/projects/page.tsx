@@ -10,7 +10,7 @@ export const dynamic = 'force-dynamic';
 
 
 async function fetchRepos(username: string) {
-    console.warn(process.env.NEXT_PUBLIC_HOST)
+    // console.warn(process.env.NEXT_PUBLIC_HOST)
     const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/github/${username}`);
     return await response.json();
 }

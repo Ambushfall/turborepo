@@ -1,9 +1,8 @@
-import { promises as fs } from 'fs'
-import path from 'path'
-
 import styles from '@app/page.module.css'
 import { Gallery } from '@components/Gallery';
 import { twtitle } from '@tw/styles';
+import { getImages } from '@utils/index';
+
 
 
 const { container, main, title } = styles
@@ -14,10 +13,8 @@ export const dynamic = 'force-static';
 
 export default async function Page() {
 
-    const imageDirectory = path.join(process.cwd(), '/public/midj');
-
     /* Reads the content of the midj dir and returns an array of strings */
-    const imageFilenames = await fs.readdir(imageDirectory)
+    const imageFilenames = await getImages()
 
     return (
         <>
