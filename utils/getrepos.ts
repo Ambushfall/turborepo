@@ -11,7 +11,7 @@ export const getRepos = async (userName: string) => {
           process.env.PRS_ACC_TOK
       },
       next: {
-        revalidate: 60*24
+        revalidate: 60
       }
     }
     try {

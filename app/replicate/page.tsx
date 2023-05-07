@@ -2,7 +2,6 @@
 'use client'
 import { useState } from "react";
 import Image from "next/image";
-import styles from '@app/page.module.css'
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -33,7 +32,7 @@ export default function Home() {
       prediction.status !== "failed"
     ) {
       await sleep(1000);
-      const response = await fetch("/api/predictions/" + prediction.id);
+      const response = await fetch(`/api/predictions/${prediction.id}`);
       prediction = await response.json();
       if (response.status !== 200) {
         setError(prediction.detail);
