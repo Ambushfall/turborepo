@@ -45,13 +45,6 @@ experimentalapp
  ├─> app
  │   ├─> api
  │   │   └── route.ts
- │   ├─> components
- │   │   ├── analytics.tsx
- │   │   ├── Gallery.tsx
- │   │   ├── gradientBackground.tsx
- │   │   ├── homeSVG.tsx
- │   │   └── NavLinkTailwind.tsx
- │   ├── css.mod.d.ts
  │   ├─> editor
  │   │   └── page.tsx
  │   ├── error.tsx
@@ -61,11 +54,9 @@ experimentalapp
  │   ├─> github
  │   │   └─> [userName]
  │   │       └── route.ts
- │   ├── globals.css
  │   ├── head.tsx
  │   ├── layout.tsx
  │   ├── loading.tsx
- │   ├── page.module.css
  │   ├── page.tsx
  │   ├─> projects
  │   │   ├── Constants.ts
@@ -73,14 +64,19 @@ experimentalapp
  │   │   ├── page.tsx
  │   │   ├── ProjectModule.tsx
  │   │   └── RepositoryModule.tsx
- │   ├─> replicate
- │   │   └── page.tsx
- │   └── server.mod.d.ts
+ │   └─> replicate
+ │       └── page.tsx
+ ├─> components
+ │   ├── analytics.tsx
+ │   ├── Gallery.tsx
+ │   ├── gradientBackground.tsx
+ │   ├── homeSVG.tsx
+ │   └── NavLinkTailwind.tsx
  ├── dree.config.json
  ├─> helpers
  │   └── toPascalCase.tsx
- ├── json-file.d.ts
- ├── manifest.json
+ ├─> json
+ │   └── manifest.json
  ├── next.config.js
  ├── package.json
  ├─> pages
@@ -93,6 +89,10 @@ experimentalapp
  ├── prebuild.js
  ├─> public
  ├── README.md
+ ├─> styles
+ │   ├── globals.css
+ │   ├── output.css
+ │   └── page.module.css
  ├── tailwind.config.js
  ├─> target
  │   └── npmlist.json
@@ -101,6 +101,9 @@ experimentalapp
  ├─> tw
  │   └── styles.ts
  ├── typedoc.json
+ ├─> types
+ │   ├── css.mod.d.ts
+ │   └── json-file.d.ts
  └─> utils
      ├── getImages.ts
      ├── getrepos.ts
