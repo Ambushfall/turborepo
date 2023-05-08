@@ -4,6 +4,9 @@ docs/*
 .vscode
 /bkup
 
+# turbo
+.turbo
+
 # dependencies
 /node_modules
 /.pnp

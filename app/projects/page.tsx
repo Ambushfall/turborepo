@@ -1,24 +1,34 @@
+import 'server-only'
+
 import styles from '@app/page.module.css';
 import { twtitle } from '@tw/styles';
-import ProjectModule from "./ProjectModule";
-const { container, main, description } = styles;
+import ProjectModule from "@components/ProjectModule";
+const { container, main, description, title } = styles;
 const GitHubUserName = 'Ambushfall';
 
+// export const revalidate = 60
 
 async function fetchRepos(username: string) {
     // console.warn(process.env.NEXT_PUBLIC_HOST)
-    const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/github/${username}`, {cache:'no-store'});
-    return await response.json();
+    const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/github/${username}`, { cache: 'no-store' });
+    // Recommendation: handle errors
+    // if (!res.ok) {
+    //     // This will activate the closest `error.js` Error Boundary
+    //     throw new Error('Failed to fetch data');
+    // }
+    
+    return res.json();
 }
 
 export default async function Page() {
+    console.log('hello I AM SERVER COMPONENT WTF')
     const repos = await fetchRepos(GitHubUserName);
     if (typeof repos === 'number' || typeof repos.message === 'string')
 
         return (
             <div className={container} >
                 <main className={main}>
-                    <h1 className={twtitle}>Error: {repos?.message ? repos.message : repos}</h1>
+                    <h1 className={title}>Error: {repos?.message ? repos.message : repos}</h1>
                 </main>
             </div>
         )
@@ -27,7 +37,7 @@ export default async function Page() {
         <>
             <div className={container} >
                 <main className={main}>
-                    <h1 className={twtitle} >All Of My Projects</h1>
+                    <h1 className={title} >All Of My Projects</h1>
                     <small className={description} >Some useful, some stupid, all fun!</small>
                     <section>
                         <div></div>

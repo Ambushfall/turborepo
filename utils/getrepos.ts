@@ -1,4 +1,4 @@
-import 'server-only'
+// import 'server-only'
 export const getRepos = async (userName: string) => {
   const route = `https://api.github.com/users/${userName}/repos?&sort=pushed&per_page=100`
   if (process.env.PRS_ACC_TOK) {
@@ -15,7 +15,8 @@ export const getRepos = async (userName: string) => {
     }
     try {
       const res: Response = await fetch(route, parameters)
-      console.log(res.headers.get('x-ratelimit-remaining'))
+      // console.log(res.headers.get('x-ratelimit-remaining'))
+      console.log(`I AM RESPONSE ${res}`)
       if (res.status === 403 && res.headers.get('x-ratelimit-remaining') === '0') {
         const resetTimeEpochSeconds = Number(res.headers.get('x-ratelimit-reset'));
         const currentTimeEpochSeconds = Math.floor(Date.now() / 1000);
