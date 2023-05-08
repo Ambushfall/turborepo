@@ -10,17 +10,23 @@ const GitHubUserName = 'Ambushfall';
 
 async function fetchRepos(username: string) {
     // console.warn(process.env.NEXT_PUBLIC_HOST)
-    const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/github/${username}`,
-        {
-            next: {
-                revalidate: 60
-            }
-        });
-    return res.json();
+
+    try {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/github/${username}`,
+            {
+                next: {
+                    revalidate: 60
+                }
+            });
+        return res.json();
+    } catch (error) {
+        console.log(error)
+    }
+
 }
 
 export default async function Page() {
-    
+
     const repos = await fetchRepos(GitHubUserName);
     if (typeof repos.message === 'string') {
         const { message, status, wait } = repos

@@ -31,6 +31,7 @@ export const getRepos = async (userName: string) => {
       }
       
       const data: any[] = await res.json();
+      // console.log(data)
       data.sort((a, b) => b.forks_count - a.forks_count);
       data.sort((a, b) => b.stargazers_count - a.stargazers_count);
 

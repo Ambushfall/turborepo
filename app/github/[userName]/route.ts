@@ -8,5 +8,6 @@ export async function GET(request: NextRequest, {
     params: { userName: string };
 }) {
     const data = await getRepos(userName)
+    // console.log(data)
     return NextResponse.json(data)
 }
