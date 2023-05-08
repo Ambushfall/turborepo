@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "docs": "typedoc",
-    "prebuild": "node ./prebuild.js",
-    "postbuild": "next start"
+    "prebuild": "node ./prebuild.js"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
