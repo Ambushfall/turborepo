@@ -60,8 +60,9 @@ experimentalapp
  │   ├── page.tsx
  │   ├─> projects
  │   │   └── page.tsx
- │   └─> replicate
- │       └── page.tsx
+ │   ├─> replicate
+ │   │   └── page.tsx
+ │   └── sitemap.ts
  ├─> components
  │   ├── analytics.tsx
  │   ├─> gallery
