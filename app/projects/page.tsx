@@ -4,15 +4,10 @@ import ProjectModule from "./ProjectModule";
 const { container, main, description } = styles;
 const GitHubUserName = 'Ambushfall';
 
-// export const revalidate = 60;
-// false | 'force-cache' | 0 | number
-// export const dynamic = 'force-dynamic';
-// 'auto' | 'force-dynamic' | 'error' | 'force-static'
-
 
 async function fetchRepos(username: string) {
     // console.warn(process.env.NEXT_PUBLIC_HOST)
-    const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/github/${username}`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/github/${username}`, {cache:'no-store'});
     return await response.json();
 }
 
