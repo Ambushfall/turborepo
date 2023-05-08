@@ -4,6 +4,26 @@ import { AnalyticsWrapper } from 'components/analytics';
 import { NavLinkTailwind } from 'components/navbar/NavLinkTailwind';
 import data from 'json/paths.json'
 
+export const metadata = {
+  title: {
+    default:  "Next 13 Experiment",
+    template: '%s | Ambushfall',
+  },
+  generator: 'Next.js',
+  applicationName: 'ExperimentalApp',
+  referrer: 'origin-when-cross-origin',
+  keywords: ['Next.js', 'React', 'Typescript'],
+  authors: [{ name: 'Ambushfall', url:"https://github.com/Ambushfall/" }],
+  // colorScheme: 'dark',
+  creator: 'Ambushfall',
+  publisher: 'Ambushfall',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+};
+
 
 export default async function RootLayout({
   children,
@@ -34,7 +54,7 @@ export default async function RootLayout({
               <div className="flex-none hidden lg:block">
                 <ul className="menu menu-horizontal">
                   <NavLinkTailwind href='/' NavItemName='Home' />
-                  {filterDirectories?.map((item: string, index:number) => <NavLinkTailwind key={index} href={`/${item}`} NavItemName={item} />)}
+                  {filterDirectories?.map((item: string, index: number) => <NavLinkTailwind key={index} href={`/${item}`} NavItemName={item} />)}
                 </ul>
               </div>
             </div>
