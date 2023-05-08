@@ -2,11 +2,14 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@utils/*": ["utils/*"],
-      "@app/*" :["app/*"],
-      "@tw/*":["tw/*"],
-      "@helpers/*":["helpers/*"],
-      "@components/*":["app/components/*"],
+      // "@utils/*": ["utils/*"],
+      // "@app/*" :["app/*"],
+      // "@tw/*":["tw/*"],
+      // "@helpers/*":["helpers/*"],
+      // "@components/*":["components/*"],
+      // "@json/*":["json/*"],
+      // "@pages/*":["pages/*"],
+      // "@styles/*":["styles/*"],
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -26,7 +29,8 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "typeRoots": ["node_modules/@types", "types"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/projects/error.js", "prebuild.js"],
   "exclude": ["node_modules"]

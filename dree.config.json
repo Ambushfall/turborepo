@@ -10,7 +10,7 @@
         "/worktree.txt",
         "/public/**/*",
         "/docs/**/*",
-        "/paths.json"
+        "json/*"
     ],
     "showHidden": false,
     "sorted" : true

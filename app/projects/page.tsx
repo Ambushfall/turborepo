@@ -1,7 +1,7 @@
-import 'server-only'
+// import 'server-only'
 
-import styles from '@app/page.module.css';
-import { twtitle } from '@tw/styles';
+import styles from 'styles/page.module.css';
+import { twtitle } from 'tw/styles';
 import ProjectModule from "./ProjectModule";
 const { container, main, description, title } = styles;
 const GitHubUserName = 'Ambushfall';

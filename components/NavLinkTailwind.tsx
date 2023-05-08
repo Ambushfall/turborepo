@@ -1,7 +1,7 @@
 'use client';
 import Link from "next/link";
 import { useSelectedLayoutSegments } from "next/navigation";
-import { toPascalCase } from '@helpers/toPascalCase'
+import { toPascalCase } from 'helpers/toPascalCase'
 
 function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')

@@ -1,4 +1,4 @@
-import { getRepos } from '@utils/getrepos';
+import { getRepos } from 'utils/getrepos';
 import { NextResponse, NextRequest } from 'next/server';
 
 

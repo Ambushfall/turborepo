@@ -1,7 +1,7 @@
-import styles from '@app/page.module.css'
-import { Gallery } from '@components/Gallery';
-import { twtitle } from '@tw/styles';
-import { getImages } from '@utils/index';
+import styles from 'styles/page.module.css'
+import { Gallery } from 'components/Gallery';
+import { twtitle } from 'tw/styles';
+import { getImages } from 'utils/index';
 
 
 

@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "docs": "typedoc",
-    "prebuild": "node ./prebuild.js"
+    "prebuild": "node ./prebuild.js",
+    "generate":"tailwindcss --input ./styles/globals.css --output ./styles/output.css",
+    "watchtw":"tailwindcss --input ./styles/globals.css --output ./styles/output.css --watch"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",

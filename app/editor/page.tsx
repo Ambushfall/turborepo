@@ -1,5 +1,5 @@
 'use client'
-import styles from '@app/page.module.css'
+import styles from 'styles/page.module.css'
 
 
 export default function CSSEDIT() {

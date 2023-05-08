@@ -11,7 +11,7 @@ async function run() {
 
     const obj = new Object({ hrefs: filterDirectories })
     console.log(obj)
-    fs.writeFile("paths.json", JSON.stringify(obj), function (err) {
+    fs.writeFile("json/paths.json", JSON.stringify(obj), function (err) {
         if (err) throw err;
         console.log('complete');
     }
