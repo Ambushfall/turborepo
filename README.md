@@ -61,8 +61,6 @@ experimentalapp
  │   ├── page.tsx
  │   ├─> projects
  │   │   └── page.tsx
- │   ├─> replicate
- │   │   └── page.tsx
  │   └── sitemap.ts
  ├─> components
  │   ├── analytics.tsx
@@ -83,11 +81,6 @@ experimentalapp
  │   └── manifest.json
  ├── next.config.js
  ├── package.json
- ├─> pages
- │   └─> api
- │       └─> predictions
- │           ├── [id].ts
- │           └── index.ts
  ├── pnpm-lock.yaml
  ├── postcss.config.js
  ├── prebuild.js
@@ -105,7 +98,9 @@ experimentalapp
  ├── typedoc.json
  ├─> types
  │   ├── css.mod.d.ts
- │   └── json-file.d.ts
+ │   ├── get-repos.d.ts
+ │   ├── json-file.d.ts
+ │   └── repositories.d.ts
  └─> utils
      ├── getImages.ts
      ├── getrepos.ts
