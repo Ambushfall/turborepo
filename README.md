@@ -64,14 +64,16 @@ experimentalapp
  │       └── page.tsx
  ├─> components
  │   ├── analytics.tsx
- │   ├── Constants.ts
- │   ├── displayProfile.tsx
- │   ├── Gallery.tsx
+ │   ├─> gallery
+ │   │   ├── Constants.ts
+ │   │   ├── displayProfile.tsx
+ │   │   ├── Gallery.tsx
+ │   │   ├── ProjectModule.tsx
+ │   │   └── RepositoryModule.tsx
  │   ├── gradientBackground.tsx
  │   ├── homeSVG.tsx
- │   ├── NavLinkTailwind.tsx
- │   ├── ProjectModule.tsx
- │   └── RepositoryModule.tsx
+ │   └─> navbar
+ │       └── NavLinkTailwind.tsx
  ├── dree.config.json
  ├─> helpers
  │   └── toPascalCase.tsx
