@@ -32,6 +32,6 @@
     ],
     "typeRoots": ["node_modules/@types", "types"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/projects/error.js", "prebuild.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/projects/error.js", "prebuild.js", "schema-generate.js"],
   "exclude": ["node_modules"]
 }

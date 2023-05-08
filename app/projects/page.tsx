@@ -1,33 +1,19 @@
+// @ts-nocheck
 import styles from 'styles/page.module.css';
 import { twtitle } from 'tw/styles';
 import ProjectModule from "components/gallery/ProjectModule";
+import { getRepos } from 'utils';
+
 const { container, main, description, title } = styles;
 const GitHubUserName = 'Ambushfall';
 
 // export const revalidate = 60
 
-async function fetchRepos(username: string) {
-    // console.warn(process.env.NEXT_PUBLIC_HOST)
-
-    try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/github/${username}`,
-            {
-                next: {
-                    revalidate: 60
-                }
-            });
-        return res.json();
-    } catch (error) {
-        console.log(error)
-    }
-
-}
-
 export default async function Page() {
 
-    const repos = await fetchRepos(GitHubUserName);
-    if (typeof repos.message === 'string') {
-        const { message, status, wait } = repos
+    const repos = await getRepos(GitHubUserName);
+    if (!Array.isArray(repos)) {
+        const { message, status } = repos
         return (
             <div className={container} >
                 <main className={main}>
