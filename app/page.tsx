@@ -1,4 +1,3 @@
-import 'server-only';
 import styles from 'styles/page.module.css'
 import Link from 'next/link';
 import data from 'json/paths.json'

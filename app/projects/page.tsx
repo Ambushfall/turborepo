@@ -1,5 +1,3 @@
-// import 'server-only'
-
 import styles from 'styles/page.module.css';
 import { twtitle } from 'tw/styles';
 import ProjectModule from "./ProjectModule";

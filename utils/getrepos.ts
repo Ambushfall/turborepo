@@ -1,4 +1,3 @@
-// import 'server-only'
 export const getRepos = async (userName: string) => {
   const route = `https://api.github.com/users/${userName}/repos?&sort=pushed&per_page=100`
   if (process.env.PRS_ACC_TOK) {
