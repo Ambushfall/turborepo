@@ -1,6 +1,6 @@
 import styles from 'styles/page.module.css';
 import { twtitle } from 'tw/styles';
-import ProjectModule from "components/ProjectModule";
+import ProjectModule from "components/gallery/ProjectModule";
 const { container, main, description, title } = styles;
 const GitHubUserName = 'Ambushfall';
 

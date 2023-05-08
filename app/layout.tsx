@@ -1,7 +1,7 @@
 import 'styles/output.css'
 import GradientBG from 'components/gradientBackground'
 import { AnalyticsWrapper } from 'components/analytics';
-import { NavLinkTailwind } from 'components/NavLinkTailwind';
+import { NavLinkTailwind } from 'components/navbar/NavLinkTailwind';
 import data from 'json/paths.json'
 
 

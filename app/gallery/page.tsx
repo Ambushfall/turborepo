@@ -1,5 +1,5 @@
 import styles from 'styles/page.module.css'
-import { Gallery } from 'components/Gallery';
+import { Gallery } from 'components/gallery/Gallery';
 import { twtitle } from 'tw/styles';
 import { getImages } from 'utils/index';
 
