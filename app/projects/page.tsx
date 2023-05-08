@@ -20,7 +20,7 @@ async function fetchRepos(username: string) {
 }
 
 export default async function Page() {
-    console.log('hello I AM SERVER COMPONENT WTF')
+    
     const repos = await fetchRepos(GitHubUserName);
     if (typeof repos.message === 'string') {
         const { message, status, wait } = repos
