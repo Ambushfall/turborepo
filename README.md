@@ -59,19 +59,19 @@ experimentalapp
  │   ├── loading.tsx
  │   ├── page.tsx
  │   ├─> projects
- │   │   ├── Constants.ts
- │   │   ├── displayProfile.tsx
- │   │   ├── page.tsx
- │   │   ├── ProjectModule.tsx
- │   │   └── RepositoryModule.tsx
+ │   │   └── page.tsx
  │   └─> replicate
  │       └── page.tsx
  ├─> components
  │   ├── analytics.tsx
+ │   ├── Constants.ts
+ │   ├── displayProfile.tsx
  │   ├── Gallery.tsx
  │   ├── gradientBackground.tsx
  │   ├── homeSVG.tsx
- │   └── NavLinkTailwind.tsx
+ │   ├── NavLinkTailwind.tsx
+ │   ├── ProjectModule.tsx
+ │   └── RepositoryModule.tsx
  ├── dree.config.json
  ├─> helpers
  │   └── toPascalCase.tsx
@@ -94,8 +94,6 @@ experimentalapp
  │   ├── output.css
  │   └── page.module.css
  ├── tailwind.config.js
- ├─> target
- │   └── npmlist.json
  ├── tsconfig.json
  ├── turbo.json
  ├─> tw
