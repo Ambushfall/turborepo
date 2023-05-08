@@ -42,8 +42,13 @@ export default function Home() {
       setPrediction(prediction);
     }
   };
-  const h1Style = `
-`
+  const h1Style = `text-6xl font-extrabold 
+  text-transparent bg-clip-text
+  bg-gradient-to-b from-[#ffffff] to-[#aaaaaa]
+  dark:invert-0
+  invert
+  text-center
+  tracking-tight`
   return (
     <div className="container max-w-2xl mx-auto p-5">
       <h1 className="

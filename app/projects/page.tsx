@@ -1,6 +1,6 @@
 import styles from 'styles/page.module.css';
 import { twtitle } from 'tw/styles';
-import ProjectModule from "./ProjectModule";
+import ProjectModule from "components/ProjectModule";
 const { container, main, description, title } = styles;
 const GitHubUserName = 'Ambushfall';
 
@@ -31,8 +31,8 @@ export default async function Page() {
         return (
             <div className={container} >
                 <main className={main}>
-                    <h1 className={title}>Code: {status}</h1>
-                    <h1 className={title}>{message}</h1>
+                    <h1 className={twtitle}>Code: {status}</h1>
+                    <h1 className={twtitle}>{message}</h1>
                 </main>
             </div>
         )
