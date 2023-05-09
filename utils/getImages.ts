@@ -18,6 +18,6 @@ export const getImages = async (): Promise<ImageArray> => {
 
         return imageFilenames
     } catch (error: any) {
-        console.warn(error)
+        console.error(error)
     }
 }
