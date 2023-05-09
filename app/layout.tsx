@@ -3,26 +3,86 @@ import GradientBG from 'components/gradientBackground'
 import { AnalyticsWrapper } from 'components/analytics';
 import { NavLinkTailwind } from 'components/navbar/NavLinkTailwind';
 import data from 'json/paths.json'
+import { Metadata, ResolvingMetadata } from 'next';
+import { getImages } from 'utils';
 
-export const metadata = {
-  title: {
-    default:  "Next 13 Experiment",
-    template: '%s | Ambushfall',
-  },
-  generator: 'Next.js',
-  applicationName: 'ExperimentalApp',
-  referrer: 'origin-when-cross-origin',
-  keywords: ['Next.js', 'React', 'Typescript'],
-  authors: [{ name: 'Ambushfall', url:"https://github.com/Ambushfall/" }],
-  // colorScheme: 'dark',
-  creator: 'Ambushfall',
-  publisher: 'Ambushfall',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-};
+// export const metadata = {
+//   title: {
+//     default: "Next 13 Experiment",
+//     template: '%s | Ambushfall',
+//   },
+//   generator: 'Next.js',
+//   applicationName: 'ExperimentalApp',
+//   referrer: 'origin-when-cross-origin',
+//   keywords: ['Next.js', 'React', 'Typescript'],
+//   authors: [{ name: 'Ambushfall', url: "https://github.com/Ambushfall/" }],
+//   // colorScheme: 'dark',
+//   creator: 'Ambushfall',
+//   publisher: 'Ambushfall',
+//   formatDetection: {
+//     email: false,
+//     address: false,
+//     telephone: false,
+//   },
+// };
+
+
+
+
+export async function generateMetadata(
+  req: any,
+  parent?: ResolvingMetadata,
+): Promise<Metadata> {
+
+
+  // optionally access and extend (rather than replace) parent metadata
+  const parentData = await parent
+  const previousImages = parentData ? parentData.openGraph?.images || [] : [];
+  const imagez = await getImages();
+  const mappedimages = imagez ? imagez.flatMap((e: string) => [`/midj/${e}`]) : [""]
+
+  const title = 'ExperimentalApp',
+    author = 'Ambushfall',
+    description = "Next 13 Experiment using AppDir and Server Components";
+
+
+  return {
+    title: {
+      default: "Next 13 ExperimentalApp",
+      template: '%s | Ambushfall',
+    },
+    description: "Learning Project :D",
+    generator: 'Next.js',
+    applicationName: title,
+    referrer: 'origin-when-cross-origin',
+    keywords: ['Next.js', 'React', 'Typescript', 'Server Components', 'Beta', 'AppDir'],
+    authors: [{ name: author, url: "https://github.com/Ambushfall/" }],
+    themeColor: [
+      { media: "(prefers-color-scheme: dark)", color: "#000000" },
+      { media: "(prefers-color-scheme: light)", color: "#ffffff" }
+    ],
+    colorScheme: 'dark light',
+    viewport: "width=device-width, initial-scale=1",
+    creator: author,
+    publisher: 'Vercel',
+    robots: "index, follow",
+    icons: [...mappedimages],
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    openGraph: {
+      images: [...mappedimages, ...previousImages],
+      type: "website",
+      title: title,
+      description: description,
+      siteName: title,
+      url: process.env.NEXT_PUBLIC_HOST
+    },
+    twitter: { card: "summary_large_image", site: title, creator: author, images: mappedimages[5] },
+  };
+}
 
 
 export default async function RootLayout({

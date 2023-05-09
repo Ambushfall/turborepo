@@ -4,6 +4,11 @@
       "build": {
         "outputs": [".next/**", "!.next/cache/**"]
       },
-      "lint": {}
+      "lint": {},
+      "dev": {
+        "dependsOn": ["watchtw", "prebuild"],
+        "cache": false,
+        "persistent": true
+      }
     }
   }
