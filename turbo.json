@@ -2,6 +2,9 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "build": {
+      "dependsOn": [
+        "prebuild"
+      ],
       "inputs": [
         "app/**",
         "components/**",
@@ -29,6 +32,12 @@
       ],
       "cache": false,
       "persistent": true
+    },
+    "prebuild": {
+      "outputs": [
+        "json/paths.json"
+      ],
+      "cache": true
     }
   }
 }
