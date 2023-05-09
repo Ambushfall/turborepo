@@ -12,10 +12,6 @@ export async function generateMetadata(
   parent?: ResolvingMetadata,
 ): Promise<Metadata> {
 
-
-  // optionally access and extend (rather than replace) parent metadata
-  const parentData = await parent
-  const previousImages = parentData ? parentData.openGraph?.images || [] : [];
   const imagez = await getImages();
   const mappedimages = imagez ? imagez.flatMap((e: string) => [`/midj/${e}`]).sort((a, b) => a.length - b.length) : [""]
 
@@ -52,7 +48,7 @@ export async function generateMetadata(
       telephone: false,
     },
     openGraph: {
-      images: [...mappedimages, ...previousImages],
+      images: [...mappedimages],
       type: "website",
       title: title,
       description: description,
