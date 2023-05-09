@@ -55,6 +55,7 @@ experimentalapp
  │   │   └─> [userName]
  │   │       └── route.ts
  │   ├── head.tsx
+ │   ├── icon.tsx
  │   ├── layout.tsx
  │   ├── loading.tsx
  │   ├── opengraph-image.png
