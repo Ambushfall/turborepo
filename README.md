@@ -78,9 +78,11 @@ experimentalapp
  │   │   ├── ProjectModule.tsx
  │   │   └── RepositoryModule.tsx
  │   ├── gradientBackground.tsx
- │   ├── homeSVG.tsx
- │   └─> navbar
- │       └── NavLinkTailwind.tsx
+ │   ├─> navbar
+ │   │   └── NavLinkTailwind.tsx
+ │   └─> svg
+ │       ├── github.tsx
+ │       └── homeSVG.tsx
  ├── dree.config.json
  ├─> helpers
  │   └── toPascalCase.tsx
