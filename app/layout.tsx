@@ -21,7 +21,8 @@ export async function generateMetadata(
 
   const title = 'ExperimentalApp',
     author = 'Ambushfall',
-    description = "Next 13 Experiment using AppDir and Server Components";
+    description = "Next 13 Experiment using AppDir and Server Components",
+    site = "Next 13 ExperimentalApp";
 
 
   return {
@@ -58,7 +59,7 @@ export async function generateMetadata(
       siteName: title,
       url: process.env.NEXT_PUBLIC_HOST
     },
-    twitter: { card: "summary_large_image", site: title, creator: author, images: mappedimages[Math.floor(Math.random() * 11)] },
+    twitter: { card: "summary_large_image", site: site, creator: author, images: mappedimages[Math.floor(Math.random() * 11)], title:title, description: description },
   };
 }
 
