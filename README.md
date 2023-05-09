@@ -1,4 +1,4 @@
-![ExperimentalApp](/public/midj/grid_20.png)
+![ExperimentalApp](/public/midj/img7.png)
 
 ## ExperimentalApp
 
