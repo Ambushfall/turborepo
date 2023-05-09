@@ -58,7 +58,6 @@ experimentalapp
  │   ├── icon.tsx
  │   ├── layout.tsx
  │   ├── loading.tsx
- │   ├── opengraph-image.png
  │   ├── page.tsx
  │   ├─> projects
  │   │   └── page.tsx
