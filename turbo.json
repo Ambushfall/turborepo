@@ -1,15 +1,34 @@
 {
-    "$schema": "https://turbo.build/schema.json",
-    "pipeline": {
-      "build": {
-        "outputs": [".next/**", "!.next/cache/**"],
-        "cache": true
-      },
-      "lint": {},
-      "dev": {
-        "dependsOn": ["watchtw", "prebuild"],
-        "cache": false,
-        "persistent": true
-      }
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "inputs": [
+        "app/**",
+        "components/**",
+        "helpers/**",
+        "json/manifest.json",
+        "tw/**",
+        "styles/**",
+        "utils/**",
+        "types/**",
+        "pages/**",
+        "tsconfig.json",
+        "package.json"
+      ],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**"
+      ],
+      "cache": true
+    },
+    "lint": {},
+    "dev": {
+      "dependsOn": [
+        "watchtw",
+        "prebuild"
+      ],
+      "cache": false,
+      "persistent": true
     }
   }
+}

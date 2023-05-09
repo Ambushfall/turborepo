@@ -11,6 +11,7 @@ const nextConfig = {
         hostname: "replicate.delivery",
       },
     ],
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 }
 

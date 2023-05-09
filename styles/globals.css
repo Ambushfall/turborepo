@@ -10,6 +10,21 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+/* Scroll Bar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:window-inactive {
+  background: whitesmoke;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -27,13 +42,12 @@ a {
     color: white;
     background: black;
   }
-  svg{
-    fill:white
+  svg {
+    fill: white;
   }
 }
 
-
-img{
+img {
   display: flex;
 }
 
@@ -45,7 +59,7 @@ img{
     color: black;
     background: white;
   }
-  svg{
-    fill:black
+  svg {
+    fill: black;
   }
 }

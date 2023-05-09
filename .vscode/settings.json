@@ -6,5 +6,6 @@
   },
   "editor.quickSuggestions": {
     "strings": true
-  }
+  },
+  "emmet.showExpandedAbbreviation": "never"
 }

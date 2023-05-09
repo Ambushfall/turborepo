@@ -9,6 +9,7 @@
 - [ExperimentalApp](#experimentalapp)
 - [Table of contents](#table-of-contents)
 - [Quick start](#quick-start)
+- [Turbo Start(CLI)](#turbo-startcli)
 - [Status](#status)
 - [Version](#version)
 - [What is included](#what-is-included)
@@ -21,8 +22,14 @@
 
 ## Quick start
 
-```code
+```sh
 pnpm i && pnpm run dev
+```
+
+## Turbo Start(CLI)
+
+```sh
+pnpm run dev:turbo & turbo daemon
 ```
 
 
