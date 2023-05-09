@@ -6,28 +6,6 @@ import data from 'json/paths.json'
 import { Metadata, ResolvingMetadata } from 'next';
 import { getImages } from 'utils';
 
-// export const metadata = {
-//   title: {
-//     default: "Next 13 Experiment",
-//     template: '%s | Ambushfall',
-//   },
-//   generator: 'Next.js',
-//   applicationName: 'ExperimentalApp',
-//   referrer: 'origin-when-cross-origin',
-//   keywords: ['Next.js', 'React', 'Typescript'],
-//   authors: [{ name: 'Ambushfall', url: "https://github.com/Ambushfall/" }],
-//   // colorScheme: 'dark',
-//   creator: 'Ambushfall',
-//   publisher: 'Ambushfall',
-//   formatDetection: {
-//     email: false,
-//     address: false,
-//     telephone: false,
-//   },
-// };
-
-
-
 
 export async function generateMetadata(
   req: any,
@@ -39,7 +17,7 @@ export async function generateMetadata(
   const parentData = await parent
   const previousImages = parentData ? parentData.openGraph?.images || [] : [];
   const imagez = await getImages();
-  const mappedimages = imagez ? imagez.flatMap((e: string) => [`/midj/${e}`]) : [""]
+  const mappedimages = imagez ? imagez.flatMap((e: string) => [`/midj/${e}`]).sort((a, b) => a.length - b.length) : [""]
 
   const title = 'ExperimentalApp',
     author = 'Ambushfall',
@@ -80,7 +58,7 @@ export async function generateMetadata(
       siteName: title,
       url: process.env.NEXT_PUBLIC_HOST
     },
-    twitter: { card: "summary_large_image", site: title, creator: author, images: mappedimages[5] },
+    twitter: { card: "summary_large_image", site: title, creator: author, images: mappedimages[Math.floor(Math.random() * 11)] },
   };
 }
 
