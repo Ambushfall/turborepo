@@ -56,7 +56,7 @@ export async function generateMetadata(
       type: "website",
       title: title,
       description: description,
-      siteName: title,
+      siteName: site,
       url: process.env.NEXT_PUBLIC_HOST
     },
     twitter: { card: "summary_large_image", site: site, creator: author, images: mappedimages[Math.floor(Math.random() * 11)], title:title, description: description },
