@@ -1,10 +1,3 @@
-const ContentSecurityPolicy = `
-  default-src 'self';
-  script-src 'self';
-  style-src 'self';
-  font-src 'self';
-`;
-
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -21,19 +14,7 @@ const nextConfig = {
     ],
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-  async headers() {
-    return [
-      {
-        source: '/*',
-        headers: [
-          {
-            key: 'Content-Security-Policy',
-            value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim()
-          }
-        ],
-      },
-    ];
-  },
+  
     
 }
 
