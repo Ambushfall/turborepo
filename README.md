@@ -71,15 +71,17 @@ experimentalapp
  │   └── sitemap.ts
  ├─> components
  │   ├── analytics.tsx
+ │   ├── favicon.tsx
  │   ├─> gallery
- │   │   ├── Constants.ts
- │   │   ├── displayProfile.tsx
- │   │   ├── Gallery.tsx
- │   │   ├── ProjectModule.tsx
- │   │   └── RepositoryModule.tsx
+ │   │   └── Gallery.tsx
  │   ├── gradientBackground.tsx
  │   ├─> navbar
  │   │   └── NavLinkTailwind.tsx
+ │   ├─> projects
+ │   │   ├── Constants.ts
+ │   │   ├── displayProfile.tsx
+ │   │   ├── ProjectModule.tsx
+ │   │   └── RepositoryModule.tsx
  │   └─> svg
  │       ├── github.tsx
  │       └── homeSVG.tsx
@@ -116,6 +118,7 @@ experimentalapp
  └─> utils
      ├── getImages.ts
      ├── getrepos.ts
+     ├── getUrl.ts
      └── index.ts
 ```
 [//]: # (dree - END)
