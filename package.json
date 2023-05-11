@@ -4,15 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "dev:turbo": "turbo run dev -- --turbo",
-    "dev:next": "turbo run dev",
+    "dev:turbo": "turbo run dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "docs": "typedoc",
-    "prebuild": "node ./prebuild.js",
-    "generate": "tailwindcss --input ./styles/globals.css --output ./styles/output.css",
-    "watchtw": "tailwindcss --input ./styles/globals.css --output ./styles/output.css --watch"
+    "prebuild": "node ./prebuild.js"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
@@ -30,6 +27,8 @@
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.3",
     "next": "13.4.1",
+    "nextra": "^2.5.1",
+    "nextra-theme-docs": "^2.5.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-photo-album": "^1.16.1",

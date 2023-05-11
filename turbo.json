@@ -27,7 +27,6 @@
     "lint": {},
     "dev": {
       "dependsOn": [
-        "watchtw",
         "prebuild"
       ],
       "cache": false,

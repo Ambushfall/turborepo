@@ -1,4 +1,4 @@
-import 'styles/output.css'
+import 'styles/globals.css'
 import GradientBG from 'components/gradientBackground'
 import { AnalyticsWrapper } from 'components/analytics'
 import { NavLinkTailwind } from 'components/navbar/NavLinkTailwind'
