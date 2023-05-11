@@ -22,7 +22,7 @@ jobs:
         with:
           showMadeWithDree: "false" # Does not add "Made with dree"
           # comment: "my-custom-dree-comment" # [//]: # (comment) Default dree
-          targetPath: "./README.md" # The path of the file where the tree should be injected
+          targetPath: "./apps/experimentalapp/README.md" # The path of the file where the tree should be injected
           config: "./apps/experimentalapp/dree.config.json"
 
       # In this step the changes to the branch are committed
