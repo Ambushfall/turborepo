@@ -33,6 +33,7 @@ jobs:
       - name: Create the docs directory locally in CI
         id: create-docs
         run: >
+          cd apps/experimentalapp &&
           pnpm run prebuild &&
           pnpm run docs &&
           echo "STATE=true" >> "$GITHUB_OUTPUT"
