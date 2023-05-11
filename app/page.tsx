@@ -31,14 +31,15 @@ type JSONApiAmbush = {
 const { container, main, title, grid, card } = styles
 
 const api: JSONApiAmbush = { '$schema': [], Auth: false, Name: 'Ambushfall' };
-const cssLink: linkObj = { href: "/editor", h2Text: "CSS Live Editor", pText: "Try out editing CSS Live in browser" };
-const JSONAPI: linkObj = { href: "/api", h2Text: "JSON Api Route", pText: "Directly Route to the Test JSON Api" };
+const cssLink: linkObj = { href: "/editor", h2Text: "CSS Live Editor", pText: "Try out editing CSS Live in browser" },
+JSONAPI: linkObj = { href: "/api", h2Text: "JSON Api Route", pText: "Directly Route to the Test JSON Api" },
+DOCS:linkObj = {href:'/docs', h2Text:"Docs", pText:"Nextra Implemented Docs"}
 
 
 /**
  * Initialize Link objects to create Cards, add more objects for more cards
  */
-const linkObjs: Array<linkObj> = [JSONAPI, cssLink]
+const linkObjs: Array<linkObj> = [JSONAPI, cssLink, DOCS, DOCS, DOCS]
 
 
 
@@ -52,11 +53,11 @@ export default async function Home() {
   })
 
   return (
-    <div className={container}>
-      <main className={main}>
+    <div className={"px-8 py-0"}>
+      <section className="min-h-[88vh] flex-1 flex flex-col justify-center items-center px-0 py-16">
         <HeadingTitle {...api} />
         <GridItemLinks {...linkObjs} />
-      </main>
+      </section>
     </div>
   )
 }
@@ -81,7 +82,7 @@ function HeadingTitle(props: JSONApiAmbush) {
 
 function GridItemLinks(links: Array<linkObj>) {
   return (
-    <div className={grid}>
+    <div className="box-border flex flex-wrap items-center justify-center border-0 border-solid border-gray-200 max-w-[1200px]">
       {Object.values(links).map((value, i) => <Link key={i} href={value.href} className={card}>
         <h2>{value.h2Text} &rarr;</h2>
         <p>{value.pText}</p>

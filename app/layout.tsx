@@ -114,14 +114,13 @@ export default async function RootLayout ({
                 </label>
               </div>
               <div className='flex-1 px-2 mx-2'></div>
-              <div className='flex-none hidden lg:block'>
+              <div className=' hidden lg:flex'>
                 <ul className='menu menu-horizontal'>
-                  <NavLinkTailwind href='/' NavItemName='Home' />
+                  <NavLinkTailwind href='/' />
                   {filterDirectories?.map((item: string, index: number) => (
                     <NavLinkTailwind
-                      key={index}
+                      key={`horizontal_${index}`}
                       href={`/${item}`}
-                      NavItemName={item}
                     />
                   ))}
                 </ul>
@@ -136,16 +135,12 @@ export default async function RootLayout ({
             <AnalyticsWrapper />
             <Footer />
           </div>
-          <div className='drawer-side'>
+          <div className='drawer-side '>
             <label htmlFor='my-drawer-3' className='drawer-overlay'></label>
-            <ul className='menu p-4 w-80 bg-base-100'>
-              <NavLinkTailwind href='/' NavItemName='Home' />
-              {filterDirectories?.map((el: string) => (
-                <NavLinkTailwind
-                  key={`sidebar${el}`}
-                  href={`/${el}`}
-                  NavItemName={el}
-                />
+            <ul className='menu p-4 w-80 bg-neutral-focus'>
+              <NavLinkTailwind href='/' />
+              {filterDirectories?.map((item: string, index: number) => (
+                <NavLinkTailwind key={`vertical_${index}`} href={`/${item}`} />
               ))}
             </ul>
           </div>

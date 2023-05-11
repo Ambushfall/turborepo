@@ -1,7 +1,7 @@
 // @ts-nocheck
 import styles from 'styles/page.module.css';
 import { twtitle } from 'tw/styles';
-import ProjectModule from "components/gallery/ProjectModule";
+import ProjectModule from "components/projects/ProjectModule";
 import { getRepos } from 'utils';
 
 const { container, main, description, title } = styles;
