@@ -49,77 +49,98 @@ Development
 [//]: # (dree - BEGIN)
 ```
 experimentalapp
- ├─> app
- │   ├─> api
- │   │   └── route.ts
- │   ├─> editor
- │   │   └── page.tsx
- │   ├── error.tsx
- │   ├── Footer.tsx
- │   ├─> gallery
- │   │   └── page.tsx
- │   ├─> github
- │   │   └─> [userName]
- │   │       └── route.ts
- │   ├── head.tsx
- │   ├── icon.tsx
- │   ├── layout.tsx
- │   ├── loading.tsx
- │   ├── page.tsx
- │   ├─> projects
- │   │   └── page.tsx
- │   └── sitemap.ts
- ├─> components
- │   ├── analytics.tsx
- │   ├── favicon.tsx
- │   ├─> gallery
- │   │   └── Gallery.tsx
- │   ├── gradientBackground.tsx
- │   ├─> navbar
- │   │   └── NavLinkTailwind.tsx
- │   ├─> projects
- │   │   ├── Constants.ts
- │   │   ├── displayProfile.tsx
- │   │   ├── ProjectModule.tsx
- │   │   └── RepositoryModule.tsx
- │   └─> svg
- │       ├── github.tsx
- │       └── homeSVG.tsx
- ├── dree.config.json
- ├─> helpers
- │   └── toPascalCase.tsx
- ├─> json
- │   └── manifest.json
- ├── next.config.js
+ ├── add.test
+ ├─> apps
+ │   └─> experimentalapp
+ │       ├─> app
+ │       │   ├─> api
+ │       │   │   └── route.ts
+ │       │   ├─> editor
+ │       │   │   └── page.tsx
+ │       │   ├── error.tsx
+ │       │   ├── Footer.tsx
+ │       │   ├─> gallery
+ │       │   │   └── page.tsx
+ │       │   ├─> github
+ │       │   │   └─> [userName]
+ │       │   │       └── route.ts
+ │       │   ├── head.tsx
+ │       │   ├── icon.tsx
+ │       │   ├── layout.tsx
+ │       │   ├── loading.tsx
+ │       │   ├── page.tsx
+ │       │   ├─> projects
+ │       │   │   └── page.tsx
+ │       │   └── sitemap.ts
+ │       ├─> components
+ │       │   ├── analytics.tsx
+ │       │   ├── favicon.tsx
+ │       │   ├─> gallery
+ │       │   │   └── Gallery.tsx
+ │       │   ├── gradientBackground.tsx
+ │       │   ├─> navbar
+ │       │   │   └── NavLinkTailwind.tsx
+ │       │   ├─> projects
+ │       │   │   ├── Constants.ts
+ │       │   │   ├── displayProfile.tsx
+ │       │   │   ├── ProjectModule.tsx
+ │       │   │   └── RepositoryModule.tsx
+ │       │   └─> svg
+ │       │       ├── github.tsx
+ │       │       └── homeSVG.tsx
+ │       ├── dree.config.json
+ │       ├─> helpers
+ │       │   └── toPascalCase.tsx
+ │       ├─> json
+ │       │   └── manifest.json
+ │       ├── next.config.js
+ │       ├── package.json
+ │       ├─> pages
+ │       │   └─> docs
+ │       │       └── index.mdx
+ │       ├── pnpm-lock.yaml
+ │       ├── postcss.config.js
+ │       ├── prebuild.js
+ │       ├─> public
+ │       │   ├── favicon.ico
+ │       │   ├─> midj
+ │       │   │   ├── grid_0.png
+ │       │   │   ├── grid_1.png
+ │       │   │   ├── grid_2.png
+ │       │   │   ├── grid_3.png
+ │       │   │   ├── grid_4.png
+ │       │   │   ├── img1.png
+ │       │   │   ├── img2.jpg
+ │       │   │   ├── img3.png
+ │       │   │   ├── img4.png
+ │       │   │   ├── img5.png
+ │       │   │   ├── img6.png
+ │       │   │   └── img7.png
+ │       │   └── vercel.svg
+ │       ├── README.md
+ │       ├─> styles
+ │       │   ├── globals.css
+ │       │   └── page.module.css
+ │       ├── tailwind.config.js
+ │       ├── theme-config.tsx
+ │       ├── tsconfig.json
+ │       ├─> tw
+ │       │   └── styles.ts
+ │       ├── typedoc.json
+ │       ├─> types
+ │       │   ├── css.mod.d.ts
+ │       │   ├── get-repos.d.ts
+ │       │   ├── json-file.d.ts
+ │       │   └── repositories.d.ts
+ │       └─> utils
+ │           ├── getImages.ts
+ │           ├── getrepos.ts
+ │           ├── getUrl.ts
+ │           └── index.ts
  ├── package.json
- ├─> pages
- │   └─> docs
- │       └── index.mdx
  ├── pnpm-lock.yaml
- ├── postcss.config.js
- ├── prebuild.js
- ├─> public
- ├── README.md
- ├─> styles
- │   ├── globals.css
- │   └── page.module.css
- ├── tailwind.config.js
- ├── theme-config.tsx
- ├── tsconfig.json
- ├── turbo.json
- ├─> tw
- │   └── styles.ts
- ├── typedoc.json
- ├─> types
- │   ├── css.mod.d.ts
- │   ├── get-repos.d.ts
- │   ├── json-file.d.ts
- │   └── repositories.d.ts
- └─> utils
-     ├── getImages.ts
-     ├── getrepos.ts
-     ├── getUrl.ts
-     └── index.ts
+ ├── pnpm-workspace.yaml
+ └── turbo.json
 ```
 [//]: # (dree - END)
 
