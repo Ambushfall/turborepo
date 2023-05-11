@@ -3,20 +3,19 @@
   "pipeline": {
     "build": {
       "dependsOn": [
-        "prebuild"
+        "prebuild",
+        "^build"
       ],
       "inputs": [
-        "app/**",
-        "components/**",
-        "helpers/**",
+        "app/*",
+        "components/*",
+        "helpers/*",
         "json/manifest.json",
         "tw/**",
         "styles/**",
         "utils/**",
         "types/**",
-        "pages/**",
-        "tsconfig.json",
-        "package.json"
+        "pages/**"
       ],
       "outputs": [
         ".next/**",
@@ -36,6 +35,10 @@
       "outputs": [
         "json/paths.json"
       ],
+      "cache": true
+    },
+    "start": {
+      "persistent": true,
       "cache": true
     }
   }
