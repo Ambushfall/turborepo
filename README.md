@@ -90,6 +90,9 @@ experimentalapp
  │   └── manifest.json
  ├── next.config.js
  ├── package.json
+ ├─> pages
+ │   └─> docs
+ │       └── index.mdx
  ├── pnpm-lock.yaml
  ├── postcss.config.js
  ├── prebuild.js
@@ -97,9 +100,9 @@ experimentalapp
  ├── README.md
  ├─> styles
  │   ├── globals.css
- │   ├── output.css
  │   └── page.module.css
  ├── tailwind.config.js
+ ├── theme-config.tsx
  ├── tsconfig.json
  ├── turbo.json
  ├─> tw
