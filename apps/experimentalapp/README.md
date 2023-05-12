@@ -142,6 +142,7 @@ turborepo
  │           ├── getrepos.ts
  │           ├── getUrl.ts
  │           └── index.ts
+ ├── CONTRIBUTING.md
  ├─> demo
  │   └── demo.png
  ├── LICENSE.md
