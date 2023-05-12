@@ -40,8 +40,8 @@ export const getRepos = async (userName: string) => {
       return data
     } catch (error: any) {
 
-      // console.log(`getrepos.ts:40 Err:${error}`)
-      console.log('getRepos')
+      console.log(`getrepos.ts:40 Err:${error}`)
+      // console.log('getRepos')
 
 
     }
