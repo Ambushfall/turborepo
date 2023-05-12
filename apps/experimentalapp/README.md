@@ -114,7 +114,8 @@ turborepo
  │       │   │   ├── img4.png
  │       │   │   ├── img5.png
  │       │   │   ├── img6.png
- │       │   │   └── img7.png
+ │       │   │   ├── img7.png
+ │       │   │   └── monorepo.png
  │       │   └── vercel.svg
  │       ├── README.md
  │       ├─> styles
