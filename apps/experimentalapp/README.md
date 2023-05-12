@@ -48,7 +48,7 @@ Development
 
 [//]: # (dree - BEGIN)
 ```
-experimentalapp
+turborepo
  ├─> apps
  │   └─> experimentalapp
  │       ├─> app
