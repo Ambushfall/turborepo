@@ -15,5 +15,9 @@
   },
   "keywords": [],
   "author": "Ambushfall",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "url": "https://github.com/ambushfall/turborepo",
+    "type": "github"
+  }
 }
