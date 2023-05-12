@@ -91,6 +91,7 @@ experimentalapp
  │       ├── dree.config.json
  │       ├─> helpers
  │       │   └── toPascalCase.tsx
+ │       ├── ignore-step.sh
  │       ├─> json
  │       │   └── manifest.json
  │       ├── next.config.js
@@ -142,6 +143,7 @@ experimentalapp
  ├── package.json
  ├── pnpm-lock.yaml
  ├── pnpm-workspace.yaml
+ ├── readme.md
  └── turbo.json
 ```
 [//]: # (dree - END)
