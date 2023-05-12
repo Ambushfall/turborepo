@@ -15,6 +15,7 @@ export const getRepos = async (userName: string) => {
       }
     }
     try {
+      
       const res: Response = await fetch(route, parameters)
       console.log(`ratelimit remaining: ${res.headers.get('x-ratelimit-remaining')}`)
       if (res.status === 403 && res.headers.get('x-ratelimit-remaining') === '0') {
@@ -39,8 +40,12 @@ export const getRepos = async (userName: string) => {
       return data
     } catch (error: any) {
 
-      console.log(`getrepos.ts:40 Err:${error}`)
+      // console.log(`getrepos.ts:40 Err:${error}`)
+      console.log('getRepos')
+
 
     }
+  } else {
+    throw Error('ERROR: PRS_ACC_TOK Missing from ENV!')
   }
 }
