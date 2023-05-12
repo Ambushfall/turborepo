@@ -49,7 +49,6 @@ Development
 [//]: # (dree - BEGIN)
 ```
 experimentalapp
- ├── add.test
  ├─> apps
  │   └─> experimentalapp
  │       ├─> app
