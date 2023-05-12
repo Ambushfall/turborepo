@@ -45,6 +45,7 @@ jobs:
           cd apps/experimentalapp &&
           cp -r public docs &&
           cp .gitignore docs &&
+          cp ignore-step.sh docs &&
           echo ${{ steps.create-docs.outputs }} >> docs/output.txt &
           echo "COPIED=true" >> "$GITHUB_OUTPUT"
 
