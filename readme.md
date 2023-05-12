@@ -1,7 +1,8 @@
+
 <br/>
 <p align="center">
   <a href="https://github.com/Ambushfall/turborepo">
-    <img src="apps/experimentalapp/public/midj/monorepo.png/" alt="Logo" width="300" height="300">
+    <img src="apps/experimentalapp/public/midj/monorepo.png" alt="Logo" width="300" height="300">
   </a>
 
   <h3 align="center">TurboRepo</h3>

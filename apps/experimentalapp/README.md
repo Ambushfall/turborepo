@@ -1,15 +1,26 @@
-![ExperimentalApp](public/midj/img7.png)
 
-## ExperimentalApp
+<br/>
+<p align="center">
+  <a href="https://github.com/Ambushfall/turborepo">
+    <img src="public/midj/img7.png" alt="Logo" width="300" height="300">
+  </a>
 
- - [Report]()
- - [Request a Feature](h)
+  <h3 align="center">ExperimentalApp</h3>
+
+  <p align="center">
+    NextJS 13 App Dir
+    <br/>
+    <a href="https://ambushfall-next13-app.vercel.app/" target="_blank">View Demo</a>
+    |
+    <a href="https://github.com/Ambushfall/turborepo/issues">Report Bug</a>
+    |
+    <a href="https://github.com/Ambushfall/turborepo/issues">Request Feature</a>
+  </p>
+</p>
 
 ## Table of contents
-- [ExperimentalApp](#experimentalapp)
 - [Table of contents](#table-of-contents)
 - [Quick start](#quick-start)
-- [Turbo Start(CLI)](#turbo-startcli)
 - [Status](#status)
 - [Version](#version)
 - [What is included](#what-is-included)
@@ -26,13 +37,6 @@
 ```sh
 pnpm i && pnpm run dev
 ```
-
-## Turbo Start(CLI)
-
-```sh
-pnpm run dev:turbo & turbo daemon
-```
-
 
 ## Status
 
