@@ -99,7 +99,6 @@ experimentalapp
  │       ├─> pages
  │       │   └─> docs
  │       │       └── index.mdx
- │       ├── pnpm-lock.yaml
  │       ├── postcss.config.js
  │       ├── prebuild.js
  │       ├─> public
