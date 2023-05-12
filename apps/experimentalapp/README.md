@@ -139,6 +139,7 @@ turborepo
  │           └── index.ts
  ├─> demo
  │   └── demo.png
+ ├── LICENSE
  ├── package.json
  ├── pnpm-lock.yaml
  ├── pnpm-workspace.yaml
