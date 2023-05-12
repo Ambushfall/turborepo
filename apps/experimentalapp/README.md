@@ -144,7 +144,8 @@ turborepo
  │           └── index.ts
  ├── CONTRIBUTING.md
  ├─> demo
- │   └── demo.png
+ │   ├── demo.png
+ │   └── madewithnext.svg
  ├── LICENSE.md
  ├── package.json
  ├── pnpm-lock.yaml
