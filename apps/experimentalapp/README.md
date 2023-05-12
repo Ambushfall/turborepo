@@ -137,6 +137,8 @@ experimentalapp
  │           ├── getrepos.ts
  │           ├── getUrl.ts
  │           └── index.ts
+ ├─> demo
+ │   └── demo.png
  ├── package.json
  ├── pnpm-lock.yaml
  ├── pnpm-workspace.yaml
