@@ -10,16 +10,17 @@
     Turborepo+Next+Nextra+TW [One click Deploy]
     <br/>
     <br/>
-    <a href="https://ambushfall-next13-app.vercel.app/">View Demo</a>
-    .
+    <a href="https://ambushfall-next13-app.vercel.app/" target="_blank">View Demo</a>
+    |
     <a href="https://github.com/Ambushfall/turborepo/issues">Report Bug</a>
-    .
+    |
     <a href="https://github.com/Ambushfall/turborepo/issues">Request Feature</a>
   </p>
 </p>
 
 ![Contributors](https://img.shields.io/github/contributors/Ambushfall/turborepo?color=dark-green) 
-![Stargazers](https://img.shields.io/github/stars/Ambushfall/turborepo?style=social) ![Issues](https://img.shields.io/github/issues/Ambushfall/turborepo) 
+![Stargazers](https://img.shields.io/github/stars/Ambushfall/turborepo?style=social) 
+![Issues](https://img.shields.io/github/issues/Ambushfall/turborepo) 
 
 ## Table Of Contents
 
