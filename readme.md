@@ -1,7 +1,3 @@
-[![forthebadge](demo/madewithnext.svg)](http://forthebadge.com)
-
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
-
 <br/>
 <p align="center">
   <a href="https://github.com/Ambushfall/turborepo">
@@ -29,6 +25,10 @@
 
 [![CI](https://github.com/ambushfall/turborepo/actions/workflows/CI_build.yaml/badge.svg)](https://github.com/ambushfall/turborepo/actions/workflows/CI_build.yaml)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields)](http://makeapullrequest.com)
+
+[![forthebadge](demo/madewithnext.svg)](http://forthebadge.com)
+
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
 ## Table Of Contents
 
