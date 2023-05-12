@@ -17,6 +17,7 @@
 - [To Be added](#to-be-added)
 - [Creators](#creators)
 - [Thanks](#thanks)
+- [License](#license)
 - [Testing](#testing)
 <!--  -->
 
@@ -168,6 +169,11 @@ If your problem or idea is not addressed yet,
 ## Thanks
 
 For taking your time to read/Contribute or assist with the Project!!
+
+## License
+
+Distributed under the MIT License. See [LICENSE](https://github.com/Ambushfall/turborepo/blob/master/LICENSE.md) for more information.
+
 
 **[Back to TOP](#)**
 
