@@ -41,7 +41,7 @@
 
 ## About The Project
 
-Using all kinds of tech and consolidating them in a Monolith :)
+Using all kinds of tech and consolidating them in a Monolith :D
 
 ![Screen Shot](demo/demo.png)
 
