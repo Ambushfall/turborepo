@@ -17,7 +17,7 @@ const config: DocsThemeConfig = {
     link: 'https://discord.com'
   },
   docsRepositoryBase:
-    'https://github.com/ambushfall/experimentalapp/blob/master/apps/experimentalapp',
+    'https://github.com/ambushfall/experimentalapp/edit/master/apps/experimentalapp',
   footer: {
     text: 'Herlo',
     component: Footer
