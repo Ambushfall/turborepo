@@ -55,6 +55,41 @@ Development
 ```
 turborepo
  ├─> apps
+ │   ├─> cloudinary-test
+ │   │   ├─> components
+ │   │   │   ├── Carousel.tsx
+ │   │   │   ├─> Icons
+ │   │   │   │   ├── Bridge.tsx
+ │   │   │   │   ├── Logo.tsx
+ │   │   │   │   └── Twitter.tsx
+ │   │   │   ├── Modal.tsx
+ │   │   │   └── SharedModal.tsx
+ │   │   ├── next.config.js
+ │   │   ├── package.json
+ │   │   ├─> pages
+ │   │   │   ├── _app.tsx
+ │   │   │   ├── _document.tsx
+ │   │   │   ├── index.tsx
+ │   │   │   └─> p
+ │   │   │       └── [photoId].tsx
+ │   │   ├── postcss.config.js
+ │   │   ├─> public
+ │   │   │   ├── favicon.ico
+ │   │   │   └── og-image.png
+ │   │   ├── README.md
+ │   │   ├─> styles
+ │   │   │   └── index.css
+ │   │   ├── tailwind.config.js
+ │   │   ├── tsconfig.json
+ │   │   └─> utils
+ │   │       ├── animationVariants.ts
+ │   │       ├── cachedImages.ts
+ │   │       ├── cloudinary.ts
+ │   │       ├── downloadPhoto.ts
+ │   │       ├── generateBlurPlaceholder.ts
+ │   │       ├── range.ts
+ │   │       ├── types.ts
+ │   │       └── useLastViewedPhoto.ts
  │   └─> experimentalapp
  │       ├─> app
  │       │   ├─> api
