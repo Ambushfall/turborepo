@@ -142,6 +142,9 @@ importers:
       typescript:
         specifier: 4.8.4
         version: 4.8.4
+      yet-another-react-lightbox:
+        specifier: ^3.9.1
+        version: 3.9.1(react-dom@18.2.0)(react@18.2.0)
     devDependencies:
       '@types/nprogress':
         specifier: ^0.2.0
@@ -6554,6 +6557,17 @@ packages:
     dependencies:
       buffer-crc32: 0.2.13
       fd-slicer: 1.1.0
+    dev: false
+
+  /yet-another-react-lightbox@3.9.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-kQFyG1L4NXHox62spvJHrdFWLS8QGawFVQwmGoc10L75IH/4cI+g5y66Xs19VXUxbR+bzwTzcUY+SDPXvYb3iA==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /yocto-queue@0.1.0:

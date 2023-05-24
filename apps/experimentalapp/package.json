@@ -33,7 +33,8 @@
     "react-photo-album": "^1.16.1",
     "replicate": "^0.11.1",
     "swr": "^1.3.0",
-    "typescript": "4.8.4"
+    "typescript": "4.8.4",
+    "yet-another-react-lightbox": "^3.9.1"
   },
   "devDependencies": {
     "@types/nprogress": "^0.2.0",
