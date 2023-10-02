@@ -33,7 +33,7 @@ const { container, main, title, grid, card } = styles
 const api: JSONApiAmbush = { $schema: [], Auth: false, Name: 'Ambushfall' }
 const cssLink: linkObj = {
     href: '/editor',
-    h2Text: 'CSS Live Editor',
+    h2Text: 'CSS Live',
     pText: 'Try out editing CSS Live in browser'
   },
   JSONAPI: linkObj = {
