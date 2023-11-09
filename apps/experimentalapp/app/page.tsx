@@ -16,6 +16,7 @@ type linkObj = {
   className?: string | undefined
   h2Text: string | undefined
   pText: string | undefined
+  regular?: boolean
 }
 
 type JSONApiAmbush = {
@@ -45,12 +46,18 @@ const cssLink: linkObj = {
     href: '/docs',
     h2Text: 'Docs',
     pText: 'Nextra Implemented Docs'
+  },
+  download: linkObj = {
+    href: '/api/download?file=MMGC.exe',
+    h2Text: 'Download MM',
+    pText: 'DL Mouse Mover',
+    regular: true
   }
 
 /**
  * Initialize Link objects to create Cards, add more objects for more cards
  */
-const linkObjs: Array<linkObj> = [JSONAPI, cssLink, DOCS]
+const linkObjs: Array<linkObj> = [JSONAPI, cssLink, DOCS, download]
 
 export default async function Home () {
   const pathnames: Array<string> = data['hrefs']
@@ -96,12 +103,19 @@ function HeadingTitle (props: JSONApiAmbush) {
 function GridItemLinks (links: Array<linkObj>) {
   return (
     <div className='box-border flex flex-wrap items-center justify-center border-0 border-solid border-gray-200 max-w-[1200px]'>
-      {Object.values(links).map((value, i) => (
-        <Link key={i} href={value.href} className={card}>
-          <h2>{value.h2Text} &rarr;</h2>
-          <p>{value.pText}</p>
-        </Link>
-      ))}
+      {Object.values(links).map((value, i) =>
+        value.regular ? (
+          <a key={i} href={value.href} className={card}>
+            <h2>{value.h2Text} &rarr;</h2>
+            <p>{value.pText}</p>
+          </a>
+        ) : (
+          <Link key={i} href={value.href} className={card}>
+            <h2>{value.h2Text} &rarr;</h2>
+            <p>{value.pText}</p>
+          </Link>
+        )
+      )}
     </div>
   )
 }
