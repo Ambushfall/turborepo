@@ -19,5 +19,8 @@
   "repository": {
     "url": "https://github.com/ambushfall/turborepo",
     "type": "github"
+  },
+  "devDependencies": {
+    "next": "^14.0.3"
   }
 }
