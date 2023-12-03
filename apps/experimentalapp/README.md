@@ -142,7 +142,6 @@ turborepo
  │       ├── ignore-step.sh
  │       ├─> json
  │       │   └── manifest.json
- │       ├── MMGC.exe
  │       ├── next.config.js
  │       ├── package.json
  │       ├─> pages
@@ -167,6 +166,7 @@ turborepo
  │       │   │   ├── img6.png
  │       │   │   ├── img7.png
  │       │   │   └── monorepo.png
+ │       │   ├── MMGC.exe
  │       │   └── vercel.svg
  │       ├── README.md
  │       ├─> styles
