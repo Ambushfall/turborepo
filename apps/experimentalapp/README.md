@@ -93,8 +93,6 @@ turborepo
  │   └─> experimentalapp
  │       ├─> app
  │       │   ├─> api
- │       │   │   ├─> download
- │       │   │   │   └── route.ts
  │       │   │   └── route.ts
  │       │   ├─> editor
  │       │   │   └── page.tsx
