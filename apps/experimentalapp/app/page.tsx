@@ -48,7 +48,7 @@ const cssLink: linkObj = {
     pText: 'Nextra Implemented Docs'
   },
   download: linkObj = {
-    href: '/api/download?file=MMGC.exe',
+    href: '/MMGC.exe',
     h2Text: 'Download MM',
     pText: 'DL Mouse Mover',
     regular: true
