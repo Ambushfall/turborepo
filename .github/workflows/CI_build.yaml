@@ -56,4 +56,4 @@ jobs:
           branch: gh-pages
           folder: apps/experimentalapp/docs
           token: ${{ secrets.SPEC_PAT }}
-          repository-name: ambushfall/experimentalapp-docs
+          repository-name: ambushfall/turborepo
