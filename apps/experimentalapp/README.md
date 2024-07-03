@@ -92,32 +92,39 @@ turborepo
  │   │       └── useLastViewedPhoto.ts
  │   └─> experimentalapp
  │       ├─> app
- │       │   ├─> api
- │       │   │   └── route.ts
- │       │   ├─> editor
- │       │   │   └── page.tsx
- │       │   ├── error.tsx
- │       │   ├── Footer.tsx
- │       │   ├─> gallery
- │       │   │   └── page.tsx
- │       │   ├─> github
- │       │   │   └─> [userName]
- │       │   │       └── route.ts
- │       │   ├── head.tsx
- │       │   ├── icon.tsx
- │       │   ├── layout.tsx
- │       │   ├─> lightbox
- │       │   │   ├── Lightbox.tsx
+ │       │   ├─> (home)
+ │       │   │   ├─> api
+ │       │   │   │   ├─> basicAuth
+ │       │   │   │   │   └── route.ts
+ │       │   │   │   └── route.ts
+ │       │   │   ├─> editor
+ │       │   │   │   └── page.tsx
+ │       │   │   ├── error.tsx
+ │       │   │   ├── Footer.tsx
+ │       │   │   ├─> gallery
+ │       │   │   │   └── page.tsx
+ │       │   │   ├─> github
+ │       │   │   │   └─> [userName]
+ │       │   │   │       └── route.ts
+ │       │   │   ├── head.tsx
+ │       │   │   ├── icon.tsx
+ │       │   │   ├── layout.tsx
+ │       │   │   ├─> lightbox
+ │       │   │   │   ├── Lightbox.tsx
+ │       │   │   │   ├── page.tsx
+ │       │   │   │   ├── slides.ts
+ │       │   │   │   └── useLightbox.tsx
+ │       │   │   ├── loading.tsx
  │       │   │   ├── page.tsx
- │       │   │   ├── slides.ts
- │       │   │   └── useLightbox.tsx
- │       │   ├── loading.tsx
- │       │   ├── page.tsx
- │       │   ├─> projects
- │       │   │   └── page.tsx
- │       │   ├── sitemap.ts
- │       │   └─> threejs
- │       │       └── page.jsx
+ │       │   │   ├─> projects
+ │       │   │   │   └── page.tsx
+ │       │   │   ├── sitemap.ts
+ │       │   │   └─> threejs
+ │       │   │       └── page.jsx
+ │       │   └─> (vencanje)
+ │       │       ├── layout.tsx
+ │       │       └─> vencanje
+ │       │           └── page.tsx
  │       ├─> components
  │       │   ├── analytics.tsx
  │       │   ├── favicon.tsx
@@ -165,11 +172,13 @@ turborepo
  │       │   │   ├── img7.png
  │       │   │   └── monorepo.png
  │       │   ├── MMGC.exe
+ │       │   ├── test.jpg
  │       │   └── vercel.svg
  │       ├── README.md
  │       ├─> styles
  │       │   ├── globals.css
- │       │   └── page.module.css
+ │       │   ├── page.module.css
+ │       │   └── secondary.css
  │       ├── tailwind.config.js
  │       ├── theme-config.tsx
  │       ├── tsconfig.json
