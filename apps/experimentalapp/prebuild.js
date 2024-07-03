@@ -3,7 +3,7 @@ const path = require('path')
 
 async function run() {
     const reg = /^([^.]+)$/g;
-    const appDirectory = path.join(process.cwd(), '/app');
+    const appDirectory = path.join(process.cwd(), '/app', '(home)');
     const appFilenames = await fs.readdir(appDirectory)
     const filterDirectories = appFilenames.filter((e) => e.match(reg) ? e !== 'components' && e !== 'api' && e !== 'github' && e !== 'editor' : false)
 
