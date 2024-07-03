@@ -1,6 +1,6 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
-import { Footer } from 'app/Footer'
+import { Footer } from 'app/(home)/Footer'
 import { GET_DEFAULT_URL } from 'utils/getUrl'
 import Icon from 'components/favicon'
 
