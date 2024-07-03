@@ -1,0 +1,8 @@
+body {
+  background-color: #ffffff00;
+  background-image: url('/test.jpg');
+  background-position: center center;
+  background-repeat: repeat;
+  background-size: cover;
+  color: black;
+}
