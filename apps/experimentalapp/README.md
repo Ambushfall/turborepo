@@ -178,6 +178,7 @@ turborepo
  │       │   └── vercel.svg
  │       ├── README.md
  │       ├─> styles
+ │       │   ├── cursive.ttf
  │       │   ├── globals.css
  │       │   ├── page.module.css
  │       │   └── secondary.css
