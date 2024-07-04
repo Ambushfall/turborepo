@@ -155,7 +155,9 @@ turborepo
  │       ├── postcss.config.js
  │       ├── prebuild.js
  │       ├─> public
+ │       │   ├── bouquet.png
  │       │   ├── favicon.ico
+ │       │   ├── maps.png
  │       │   ├── MD_CHEATSHEET.MD
  │       │   ├─> midj
  │       │   │   ├── grid_0.png
