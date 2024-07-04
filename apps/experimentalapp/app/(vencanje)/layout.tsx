@@ -4,7 +4,14 @@ import { Libre_Baskerville } from 'next/font/google'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
+import localFont from 'next/font/local'
 
+
+const myFont = localFont({
+  src: '../../styles/cursive.ttf',
+  display: 'swap',
+  variable: '--cursive-latin'
+})
 
 const Baskerville = Libre_Baskerville({
   subsets: ['latin'],
@@ -28,7 +35,7 @@ export default async function RootLayout ({
         head.tsx.  Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className={`h-full ${Baskerville.variable}`}>{children}</body>
+      <body className={`h-full ${Baskerville.variable} ${myFont.variable}`}>{children}</body>
     </html>
   )
 }
