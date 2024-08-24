@@ -109,11 +109,6 @@ turborepo
  │       │   │   ├── head.tsx
  │       │   │   ├── icon.tsx
  │       │   │   ├── layout.tsx
- │       │   │   ├─> lightbox
- │       │   │   │   ├── Lightbox.tsx
- │       │   │   │   ├── page.tsx
- │       │   │   │   ├── slides.ts
- │       │   │   │   └── useLightbox.tsx
  │       │   │   ├── loading.tsx
  │       │   │   ├── page.tsx
  │       │   │   ├─> projects
