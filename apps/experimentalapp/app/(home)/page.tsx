@@ -1,6 +1,8 @@
 import styles from 'styles/page.module.css'
 import Link from 'next/link'
 import data from 'json/paths.json'
+import { headers } from 'next/headers';
+
 
 export const metadata = {
   title: 'Home'
@@ -60,6 +62,11 @@ const cssLink: linkObj = {
 const linkObjs: Array<linkObj> = [JSONAPI, cssLink, DOCS, download]
 
 export default async function Home () {
+  const headersList = headers();
+  // Vercel populates the 'x-forwarded-for' header.
+  const ip = (headersList.get('x-forwarded-for') ?? '127.0.0.1').split(',')[0].trim();
+
+  console.log("Client IP:", ip);
   const pathnames: Array<string> = data['hrefs']
   pathnames.forEach(e => {
     const obj: linkObj = {
@@ -73,6 +80,7 @@ export default async function Home () {
 
   return (
     <div className={'px-8 py-0'}>
+       <p>IP Address: {ip || "Not found"}</p>
       <section className='min-h-[88vh] flex-1 flex flex-col justify-center items-center px-0 py-16'>
         <HeadingTitle {...api} />
         <GridItemLinks {...linkObjs} />
